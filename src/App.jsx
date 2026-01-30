@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+import LiveHero from './components/LiveHero'
+import BannerHero from './components/BannerHero'
 
 // Code split below-fold sections to optimize initial load
 const Showcase = lazy(() => import('./components/Showcase'))
@@ -17,11 +17,21 @@ function SectionLoader() {
 }
 
 export default function App() {
+  // Check for ?banner in URL to show LinkedIn banner screenshot mode
+  const showBanner = window.location.search.includes('banner')
+
+  if (showBanner) {
+    return (
+      <div className="min-h-screen bg-neutral-900 flex items-center justify-center p-8">
+        <BannerHero />
+      </div>
+    )
+  }
+
   return (
-    <div className="gradient-mesh min-h-screen">
-      <Navbar />
+    <div className="min-h-screen bg-[#0a0a0f]">
       <main>
-        <Hero />
+        <LiveHero />
         <Suspense fallback={<SectionLoader />}>
           <Showcase />
           <Workflow />
