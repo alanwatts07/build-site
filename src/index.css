@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-950: #0a0a0a;
+  --color-dark-900: #121212;
+  --color-dark-800: #1a1a1a;
+  --color-dark-700: #2a2a2a;
+  --color-accent-500: #6366f1;
+  --color-accent-400: #818cf8;
+  --color-accent-600: #4f46e5;
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-950 text-gray-100 antialiased;
+  font-family: var(--font-family-sans);
+}
+
+::selection {
+  @apply bg-accent-500/30 text-white;
+}
+
+/* Subtle gradient backgrounds */
+.gradient-mesh {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(99, 102, 241, 0.05) 0%, transparent 50%);
+}
