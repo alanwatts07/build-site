@@ -23,7 +23,7 @@ export default function Contact() {
                 Email
               </a>
               <a
-                href="https://linkedin.com/in/mattcorwin"
+                href="https://www.linkedin.com/in/matthew-corwin-b38347a8/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-dark-700 bg-dark-800 px-5 py-3 text-sm font-medium text-gray-300 transition-all hover:border-accent-500/50 hover:text-white"
