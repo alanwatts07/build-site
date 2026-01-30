@@ -3,14 +3,16 @@ export const projects = [
     id: 'whistleblower-workbench',
     title: 'Whistleblower Workbench',
     category: 'Fraud Detection',
-    description: 'Secure platform for analyzing and managing whistleblower submissions with automated fraud pattern detection and case management workflows.',
-    technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'React'],
+    description: 'False Claims Act intelligence platform for identifying qui tam opportunities. Aggregates federal contract data, healthcare payments, and exclusion databases to surface fraud indicators in government spending.',
+    technologies: ['Next.js 15', 'React 19', 'Server Actions', 'ML Pipeline'],
     highlights: [
-      'End-to-end encrypted submission pipeline',
-      'ML-powered anomaly detection',
-      'Automated risk scoring engine'
+      'USASpending.gov integration with ML-powered risk scoring',
+      'OIG exclusion database analysis (82K+ records)',
+      'Healthcare fraud detection: Medicare payments & pharma kickbacks'
     ],
-    status: 'Production MVP'
+    status: 'Live Demo',
+    githubUrl: 'https://github.com/alanwatts07/whistleblower-workbench',
+    demoUrl: 'https://false-claims-suite.vercel.app'
   },
   {
     id: 'tcn-risk-map',
