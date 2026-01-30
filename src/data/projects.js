@@ -27,15 +27,17 @@ export const projects = [
   },
   {
     id: 'predictive-maintenance',
-    title: 'Predictive Maintenance POC',
-    category: 'Industrial AI',
-    description: 'IoT sensor data pipeline with machine learning models for equipment failure prediction in manufacturing environments.',
-    technologies: ['Python', 'Apache Kafka', 'InfluxDB', 'scikit-learn', 'Grafana'],
+    title: 'Predictive Maintenance Dashboard',
+    category: 'Industrial IoT',
+    description: 'Real-time bearing health monitoring dashboard with vibration analysis. Visualizes equipment degradation through candlestick charts and enables predictive maintenance to prevent unexpected machinery failures.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'WebSocket'],
     highlights: [
-      'Real-time sensor data ingestion',
-      '85% accuracy on failure prediction',
-      'Automated alerting system'
+      'Live candlestick charts with 1-second vibration RMS data',
+      'Automatic health classification: HEALTHY → DEGRADING → CRITICAL',
+      'Fault injection simulation for demo scenarios'
     ],
-    status: 'POC Complete'
+    status: 'Live Demo',
+    githubUrl: 'https://github.com/alanwatts07/predictive-maintenance-dashboard-poc',
+    demoUrl: 'https://frontend-two-ashy-yla6dtp7w4.vercel.app'
   }
 ]

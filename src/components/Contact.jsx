@@ -14,7 +14,7 @@ export default function Contact() {
           <div className="space-y-6">
             <div className="flex items-center justify-center gap-4">
               <a
-                href="mailto:matt@example.com"
+                href="mailto:me@mattcorwin.dev"
                 className="flex items-center gap-2 rounded-lg border border-dark-700 bg-dark-800 px-5 py-3 text-sm font-medium text-gray-300 transition-all hover:border-accent-500/50 hover:text-white"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,7 +34,7 @@ export default function Contact() {
                 LinkedIn
               </a>
               <a
-                href="https://github.com/mattcorwin"
+                href="https://github.com/alanwatts07"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border border-dark-700 bg-dark-800 px-5 py-3 text-sm font-medium text-gray-300 transition-all hover:border-accent-500/50 hover:text-white"
