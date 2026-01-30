@@ -15,17 +15,18 @@ export const projects = [
     demoUrl: 'https://false-claims-suite.vercel.app'
   },
   {
-    id: 'tcn-risk-map',
-    title: 'TCN-Risk-Map',
-    category: 'FinTech',
-    description: 'Real-time counterparty risk visualization platform using temporal convolutional networks for predictive risk assessment in financial networks.',
-    technologies: ['Python', 'TensorFlow', 'Neo4j', 'D3.js', 'FastAPI'],
+    id: 'tcn-trading-bot',
+    title: 'TCN Trading Bot',
+    category: 'Quantitative Finance',
+    description: 'Real-time cryptocurrency trading system using Temporal Convolutional Networks for price direction prediction with online probability calibration and walk-forward validation.',
+    technologies: ['PyTorch', 'Optuna', 'Binance API', 'WebSocket', 'Rich'],
     highlights: [
-      'Graph-based risk propagation modeling',
-      'Sub-second inference latency',
-      'Interactive network visualization'
+      'Custom TCN with causal convolutions & attention mechanisms',
+      '200+ engineered features: technicals, microstructure, order flow',
+      'Walk-forward validation: 90.5% long win rate (no lookahead bias)'
     ],
-    status: 'Prototype'
+    status: 'Research',
+    githubUrl: 'https://github.com/alanwatts07/tcn-trading-bot'
   },
   {
     id: 'predictive-maintenance',
