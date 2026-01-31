@@ -70,17 +70,25 @@ export default function LiveHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         {/* Top status bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-indigo-500/20">
+        <div className="relative flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-indigo-500/20">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               <span className="text-emerald-400 text-xs sm:text-sm">SYSTEM ACTIVE</span>
             </div>
           </div>
-          <div className="flex items-center gap-4 text-xs">
-            <span className="text-gray-500 hidden sm:inline">NODE: <span className="text-indigo-400">mattcorwin.dev</span></span>
-            <span className="text-gray-500 hidden sm:inline">MODE: <span className="text-cyan-400">AI-AUGMENTED</span></span>
-            <span className="text-gray-500">LOCAL: <span className="text-emerald-400 font-bold tracking-wider">{time}</span></span>
+          {/* Centered on desktop */}
+          <div className="hidden sm:flex items-center gap-2 text-xs text-gray-500 absolute left-1/2 -translate-x-1/2">
+            <span>LOCAL:</span>
+            <span className="text-emerald-400 font-bold tracking-wider">{time}</span>
+          </div>
+          {/* Right side on mobile */}
+          <div className="flex sm:hidden items-center text-xs text-gray-500">
+            <span>LOCAL: <span className="text-emerald-400 font-bold tracking-wider">{time}</span></span>
+          </div>
+          <div className="hidden sm:flex items-center gap-4 text-xs">
+            <span className="text-gray-500">NODE: <span className="text-indigo-400">mattcorwin.dev</span></span>
+            <span className="text-gray-500">MODE: <span className="text-cyan-400">AI-AUGMENTED</span></span>
           </div>
         </div>
 
