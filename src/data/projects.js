@@ -11,7 +11,7 @@ export const projects = [
       'Ellipses-based pattern detection: SIG (signature) & POW (power) markers'
     ],
     status: 'Windows App',
-    image: 'https://raw.githubusercontent.com/alanwatts07/SpeechProfilerWindows/main/screenshot.png',
+    image: 'https://raw.githubusercontent.com/alanwatts07/SpeechProfilerWindows/master/screenshot.png',
     githubUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows',
     downloadUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows/releases/download/v1.0/SpeechProfiler.zip'
   },
@@ -58,7 +58,7 @@ export const projects = [
       'Fault injection simulation for demo scenarios'
     ],
     status: 'Live Demo',
-    image: 'https://raw.githubusercontent.com/alanwatts07/predictive-maintenance-dashboard-poc/main/docs/preview.png',
+    image: 'https://raw.githubusercontent.com/alanwatts07/predictive-maintenance-dashboard-poc/master/docs/preview.png',
     githubUrl: 'https://github.com/alanwatts07/predictive-maintenance-dashboard-poc',
     demoUrl: 'https://frontend-two-ashy-yla6dtp7w4.vercel.app'
   }
