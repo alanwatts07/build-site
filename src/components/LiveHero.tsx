@@ -76,14 +76,11 @@ export default function LiveHero() {
               <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
               <span className="text-emerald-400 text-xs sm:text-sm">SYSTEM ACTIVE</span>
             </div>
-            <div className="hidden sm:flex items-center gap-2 text-xs text-gray-500">
-              <span>LOCAL:</span>
-              <span className="text-emerald-400 font-bold tracking-wider">{time}</span>
-            </div>
           </div>
           <div className="flex items-center gap-4 text-xs">
-            <span className="text-gray-500">NODE: <span className="text-indigo-400">mattcorwin.dev</span></span>
-            <span className="text-gray-500">MODE: <span className="text-cyan-400">AI-AUGMENTED</span></span>
+            <span className="text-gray-500 hidden sm:inline">NODE: <span className="text-indigo-400">mattcorwin.dev</span></span>
+            <span className="text-gray-500 hidden sm:inline">MODE: <span className="text-cyan-400">AI-AUGMENTED</span></span>
+            <span className="text-gray-500">LOCAL: <span className="text-emerald-400 font-bold tracking-wider">{time}</span></span>
           </div>
         </div>
 
