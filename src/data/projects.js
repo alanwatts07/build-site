@@ -11,7 +11,7 @@ export const projects = [
       'Ellipses-based pattern detection: SIG (signature) & POW (power) markers'
     ],
     status: 'Windows App',
-    image: '/Screenshot-profiler.png',
+    image: 'https://raw.githubusercontent.com/alanwatts07/SpeechProfilerWindows/main/screenshot.png',
     githubUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows',
     downloadUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows/releases/download/v1.0/SpeechProfiler.zip'
   },
@@ -27,6 +27,7 @@ export const projects = [
       'Healthcare fraud detection: Medicare payments & pharma kickbacks'
     ],
     status: 'Live Demo',
+    image: 'https://raw.githubusercontent.com/alanwatts07/whistleblower-workbench/main/screenshot.png',
     githubUrl: 'https://github.com/alanwatts07/whistleblower-workbench',
     demoUrl: 'https://false-claims-suite.vercel.app'
   },
@@ -42,6 +43,7 @@ export const projects = [
       'Walk-forward validation: 90.5% long win rate (no lookahead bias)'
     ],
     status: 'Research',
+    image: 'https://raw.githubusercontent.com/alanwatts07/tcn-trading-bot/main/Screenshot.png',
     githubUrl: 'https://github.com/alanwatts07/tcn-trading-bot'
   },
   {
