@@ -13,7 +13,7 @@ export const projects = [
     status: 'Windows App',
     image: '/Screenshot-profiler.png',
     githubUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows',
-    downloadUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows/releases/latest'
+    downloadUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows/releases/download/v1.0/SpeechProfiler.zip'
   },
   {
     id: 'whistleblower-workbench',
