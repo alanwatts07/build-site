@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export default function LiveHero() {
-  const [time, setTime] = useState(new Date().toLocaleTimeString('en-GB', { hour12: false }))
+  const [time, setTime] = useState('--:--:--')
   const [logIndex1, setLogIndex1] = useState(0)
   const [logIndex2, setLogIndex2] = useState(0)
   const [logIndex3, setLogIndex3] = useState(0)
@@ -33,8 +33,9 @@ export default function LiveHero() {
     '[ALERT] Monitoring bearing #3...',
   ]
 
-  // Real-time clock
+  // Real-time clock (client-side only to avoid SSR mismatch)
   useEffect(() => {
+    setTime(new Date().toLocaleTimeString('en-GB', { hour12: false }))
     const timer = setInterval(() => {
       setTime(new Date().toLocaleTimeString('en-GB', { hour12: false }))
     }, 1000)
