@@ -58,6 +58,7 @@ export const projects = [
       'Fault injection simulation for demo scenarios'
     ],
     status: 'Live Demo',
+    image: 'https://raw.githubusercontent.com/alanwatts07/predictive-maintenance-dashboard-poc/main/docs/preview.png',
     githubUrl: 'https://github.com/alanwatts07/predictive-maintenance-dashboard-poc',
     demoUrl: 'https://frontend-two-ashy-yla6dtp7w4.vercel.app'
   }
