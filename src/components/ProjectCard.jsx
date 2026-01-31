@@ -1,8 +1,21 @@
 export default function ProjectCard({ project }) {
-  const { title, category, description, technologies, highlights, status, githubUrl, demoUrl } = project
+  const { title, category, description, technologies, highlights, status, githubUrl, demoUrl, downloadUrl, image } = project
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-dark-700 bg-dark-900/50 p-6 transition-all duration-300 hover:border-dark-600 hover:bg-dark-800/50">
+    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-dark-700 bg-dark-900/50 transition-all duration-300 hover:border-dark-600 hover:bg-dark-800/50">
+      {/* Screenshot */}
+      {image && (
+        <div className="relative h-48 w-full overflow-hidden border-b border-dark-700">
+          <img
+            src={image}
+            alt={`${title} screenshot`}
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent opacity-60" />
+        </div>
+      )}
+
+      <div className="flex flex-col flex-1 p-6">
       {/* Status badge */}
       <div className="mb-4 flex items-center justify-between">
         <span className="text-xs font-medium uppercase tracking-wider text-accent-400">
@@ -72,8 +85,22 @@ export default function ProjectCard({ project }) {
               Live Demo
             </a>
           )}
+          {downloadUrl && (
+            <a
+              href={downloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-emerald-400"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              Download
+            </a>
+          )}
         </div>
       )}
+      </div>
 
       {/* Hover gradient accent */}
       <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-accent-500/50 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />

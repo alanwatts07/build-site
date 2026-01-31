@@ -1,5 +1,21 @@
 export const projects = [
   {
+    id: 'speech-profiler',
+    title: 'Speech Profiler',
+    category: 'NLP & Audio Analysis',
+    description: 'Real-time speech profiling tool that captures system audio to transcribe and analyze speakers. Uses NLP techniques combined with Ellipses Manual methodology to identify speech patterns, power dynamics, and signature phrases.',
+    technologies: ['Python', 'NLP', 'Speech Recognition', 'Claude API', 'PyQt'],
+    highlights: [
+      'Live audio capture from any system source (calls, videos, meetings)',
+      'Multi-speaker diarization with renameable speaker profiles',
+      'Ellipses-based pattern detection: SIG (signature) & POW (power) markers'
+    ],
+    status: 'Windows App',
+    image: '/Screenshot-profiler.png',
+    githubUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows',
+    downloadUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows/releases/latest'
+  },
+  {
     id: 'whistleblower-workbench',
     title: 'Whistleblower Workbench',
     category: 'Fraud Detection',
