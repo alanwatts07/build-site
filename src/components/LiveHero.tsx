@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export default function LiveHero() {
-  const [time, setTime] = useState(new Date().toISOString().slice(11, 19))
+  const [time, setTime] = useState(new Date().toLocaleTimeString('en-GB', { hour12: false }))
   const [logIndex1, setLogIndex1] = useState(0)
   const [logIndex2, setLogIndex2] = useState(0)
   const [logIndex3, setLogIndex3] = useState(0)
@@ -36,7 +36,7 @@ export default function LiveHero() {
   // Real-time clock
   useEffect(() => {
     const timer = setInterval(() => {
-      setTime(new Date().toISOString().slice(11, 19))
+      setTime(new Date().toLocaleTimeString('en-GB', { hour12: false }))
     }, 1000)
     return () => clearInterval(timer)
   }, [])
@@ -76,7 +76,7 @@ export default function LiveHero() {
               <span className="text-emerald-400 text-xs sm:text-sm">SYSTEM ACTIVE</span>
             </div>
             <div className="hidden sm:flex items-center gap-2 text-xs text-gray-500">
-              <span>UPTIME:</span>
+              <span>LOCAL:</span>
               <span className="text-emerald-400 font-bold tracking-wider">{time}</span>
             </div>
           </div>
