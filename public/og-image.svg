@@ -1,0 +1,110 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0f"/>
+
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(99, 102, 241, 0.1)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Gradient overlay -->
+  <rect width="1200" height="630" fill="url(#radialGlow)"/>
+  <defs>
+    <radialGradient id="radialGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="rgba(99, 102, 241, 0.15)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Top status bar -->
+  <line x1="60" y1="80" x2="1140" y2="80" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1"/>
+
+  <!-- System active indicator -->
+  <circle cx="80" cy="50" r="5" fill="#34d399"/>
+  <text x="95" y="55" font-family="monospace" font-size="14" fill="#34d399">SYSTEM ACTIVE</text>
+
+  <!-- Node info -->
+  <text x="1050" y="55" font-family="monospace" font-size="12" fill="#6b7280" text-anchor="end">NODE: <tspan fill="#818cf8">mattcorwin.dev</tspan></text>
+
+  <!-- Role badge -->
+  <rect x="440" y="140" width="320" height="32" rx="16" fill="none" stroke="rgba(99, 102, 241, 0.4)" stroke-width="1"/>
+  <text x="600" y="162" font-family="monospace" font-size="13" fill="#818cf8" text-anchor="middle" letter-spacing="3">TECHNICAL PRODUCT ARCHITECT</text>
+
+  <!-- Main name -->
+  <text x="600" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" text-anchor="middle">Matt Corwin</text>
+
+  <!-- Tagline -->
+  <text x="600" y="300" font-family="system-ui, sans-serif" font-size="24" fill="#9ca3af" text-anchor="middle">Rapid MVP Development &amp; Data Pipelines</text>
+
+  <!-- Terminal windows row -->
+  <!-- Terminal 1 -->
+  <rect x="100" y="360" width="300" height="160" rx="8" fill="rgba(0,0,0,0.5)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1"/>
+  <rect x="100" y="360" width="300" height="28" rx="8" fill="rgba(99, 102, 241, 0.1)"/>
+  <circle cx="118" cy="374" r="4" fill="rgba(239, 68, 68, 0.6)"/>
+  <circle cx="132" cy="374" r="4" fill="rgba(234, 179, 8, 0.6)"/>
+  <circle cx="146" cy="374" r="4" fill="rgba(34, 197, 94, 0.6)"/>
+  <text x="165" y="378" font-family="monospace" font-size="11" fill="#9ca3af">whistleblower-workbench</text>
+  <circle cx="380" cy="374" r="3" fill="#34d399"/>
+  <text x="115" y="410" font-family="monospace" font-size="11" fill="#34d399">[INFO] Scanning OIG records...</text>
+  <text x="115" y="428" font-family="monospace" font-size="11" fill="#4b5563">[DATA] 82,709 providers loaded</text>
+  <text x="115" y="446" font-family="monospace" font-size="11" fill="#4b5563">[SCAN] Cross-referencing...</text>
+  <text x="115" y="464" font-family="monospace" font-size="11" fill="#4b5563">[ALERT] High-risk detected</text>
+  <text x="115" y="482" font-family="monospace" font-size="11" fill="#4b5563">[ML] Confidence: 94.2%</text>
+
+  <!-- Terminal 2 -->
+  <rect x="450" y="360" width="300" height="160" rx="8" fill="rgba(0,0,0,0.5)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1"/>
+  <rect x="450" y="360" width="300" height="28" rx="8" fill="rgba(99, 102, 241, 0.1)"/>
+  <circle cx="468" cy="374" r="4" fill="rgba(239, 68, 68, 0.6)"/>
+  <circle cx="482" cy="374" r="4" fill="rgba(234, 179, 8, 0.6)"/>
+  <circle cx="496" cy="374" r="4" fill="rgba(34, 197, 94, 0.6)"/>
+  <text x="515" y="378" font-family="monospace" font-size="11" fill="#9ca3af">tcn-trading-bot</text>
+  <circle cx="730" cy="374" r="3" fill="#22d3ee"/>
+  <text x="465" y="410" font-family="monospace" font-size="11" fill="#22d3ee">[STREAM] BTC-USD connected</text>
+  <text x="465" y="428" font-family="monospace" font-size="11" fill="#4b5563">[FEATURE] 216 indicators</text>
+  <text x="465" y="446" font-family="monospace" font-size="11" fill="#4b5563">[MODEL] TCN: LONG signal</text>
+  <text x="465" y="464" font-family="monospace" font-size="11" fill="#4b5563">[PROB] Confidence: 0.847</text>
+  <text x="465" y="482" font-family="monospace" font-size="11" fill="#4b5563">[VALIDATE] 89.2% win rate</text>
+
+  <!-- Terminal 3 -->
+  <rect x="800" y="360" width="300" height="160" rx="8" fill="rgba(0,0,0,0.5)" stroke="rgba(99, 102, 241, 0.3)" stroke-width="1"/>
+  <rect x="800" y="360" width="300" height="28" rx="8" fill="rgba(99, 102, 241, 0.1)"/>
+  <circle cx="818" cy="374" r="4" fill="rgba(239, 68, 68, 0.6)"/>
+  <circle cx="832" cy="374" r="4" fill="rgba(234, 179, 8, 0.6)"/>
+  <circle cx="846" cy="374" r="4" fill="rgba(34, 197, 94, 0.6)"/>
+  <text x="865" y="378" font-family="monospace" font-size="11" fill="#9ca3af">predictive-maintenance</text>
+  <circle cx="1080" cy="374" r="3" fill="#fbbf24"/>
+  <text x="815" y="410" font-family="monospace" font-size="11" fill="#fbbf24">[MODEL] XGBoost loaded</text>
+  <text x="815" y="428" font-family="monospace" font-size="11" fill="#4b5563">[SENSOR] Vibration streaming</text>
+  <text x="815" y="446" font-family="monospace" font-size="11" fill="#4b5563">[EXTRACT] 14 features</text>
+  <text x="815" y="464" font-family="monospace" font-size="11" fill="#4b5563">[PREDICT] State: HEALTHY</text>
+  <text x="815" y="482" font-family="monospace" font-size="11" fill="#4b5563">[CONF] Degradation: 8.2%</text>
+
+  <!-- Tech stack -->
+  <text x="600" y="570" font-family="monospace" font-size="12" fill="#6b7280" text-anchor="middle">
+    <tspan fill="rgba(99, 102, 241, 0.6)">STACK:</tspan>
+    <tspan fill="#9ca3af"> React 19 </tspan>
+    <tspan fill="rgba(99, 102, 241, 0.5)">•</tspan>
+    <tspan fill="#9ca3af"> Next.js 15 </tspan>
+    <tspan fill="rgba(99, 102, 241, 0.5)">•</tspan>
+    <tspan fill="#9ca3af"> Python </tspan>
+    <tspan fill="rgba(99, 102, 241, 0.5)">•</tspan>
+    <tspan fill="#9ca3af"> FastAPI </tspan>
+    <tspan fill="rgba(99, 102, 241, 0.5)">•</tspan>
+    <tspan fill="#9ca3af"> XGBoost </tspan>
+    <tspan fill="rgba(99, 102, 241, 0.5)">•</tspan>
+    <tspan fill="#9ca3af"> LLM-Orchestration</tspan>
+  </text>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="625" width="1200" height="5" fill="url(#bottomGradient)"/>
+  <defs>
+    <linearGradient id="bottomGradient" x1="0" y1="0" x2="1200" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+</svg>
