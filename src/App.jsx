@@ -25,7 +25,7 @@ function Home() {
       <main>
         <LiveHero />
         <Suspense fallback={<SectionLoader />}>
-          <section className="px-6 py-16 bg-[#0a0a0f]">
+          <section className="px-6 py-8 bg-[#0a0a0f]">
             <div className="mx-auto max-w-2xl">
               <GitHubActivity />
             </div>

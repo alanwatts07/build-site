@@ -173,7 +173,7 @@ export default function GitHubActivity() {
     async function fetchActivity() {
       try {
         const response = await fetch(
-          `https://api.github.com/users/${GITHUB_USERNAME}/events/public?per_page=10`
+          `https://api.github.com/users/${GITHUB_USERNAME}/events/public?per_page=5`
         )
         if (!response.ok) throw new Error('Failed to fetch')
         const data = await response.json()
@@ -209,7 +209,7 @@ export default function GitHubActivity() {
 
       {loading ? (
         <div className="space-y-3">
-          {[...Array(5)].map((_, i) => (
+          {[...Array(3)].map((_, i) => (
             <div key={i} className="h-16 rounded-lg bg-black/20 animate-pulse" />
           ))}
         </div>
