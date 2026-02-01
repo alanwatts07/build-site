@@ -5,7 +5,6 @@ import BannerHero from './components/BannerHero'
 
 // Code split below-fold sections to optimize initial load
 const Showcase = lazy(() => import('./components/Showcase'))
-const TechAndActivity = lazy(() => import('./components/TechAndActivity'))
 const Workflow = lazy(() => import('./components/Workflow'))
 const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
@@ -26,7 +25,6 @@ function Home() {
         <LiveHero />
         <Suspense fallback={<SectionLoader />}>
           <Showcase />
-          <TechAndActivity />
           <Workflow />
           <Contact />
           <Footer />
