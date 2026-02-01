@@ -222,7 +222,7 @@ export default function GitHubActivity() {
         </div>
       ) : (
         <div className="space-y-2">
-          {events.map((event, index) => (
+          {events.slice(0, 5).map((event, index) => (
             <ActivityItem key={event.id} event={event} index={index} />
           ))}
         </div>
