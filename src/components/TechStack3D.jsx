@@ -60,7 +60,6 @@ function TechNode({ tech, position, index }) {
         color={tech.color}
         anchorX="center"
         anchorY="middle"
-        font="/fonts/mono.woff"
       >
         {tech.name}
       </Text>
