@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function LiveHero() {
   const [time, setTime] = useState('--:--:--')
@@ -113,6 +114,12 @@ export default function LiveHero() {
             >
               View Projects
             </a>
+            <Link
+              to="/about"
+              className="px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-gray-300 hover:text-white rounded-lg text-sm font-medium transition-all"
+            >
+              About Me
+            </Link>
             <a
               href="#contact"
               className="px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-gray-300 hover:text-white rounded-lg text-sm font-medium transition-all"

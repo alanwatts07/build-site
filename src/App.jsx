@@ -1,4 +1,5 @@
 import { lazy, Suspense } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LiveHero from './components/LiveHero'
 import BannerHero from './components/BannerHero'
 
@@ -7,11 +8,28 @@ const Showcase = lazy(() => import('./components/Showcase'))
 const Workflow = lazy(() => import('./components/Workflow'))
 const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
+const About = lazy(() => import('./pages/About'))
 
 function SectionLoader() {
   return (
     <div className="flex justify-center py-20">
       <div className="h-8 w-8 animate-spin rounded-full border-2 border-accent-500 border-t-transparent" />
+    </div>
+  )
+}
+
+function Home() {
+  return (
+    <div className="min-h-screen bg-[#0a0a0f]">
+      <main>
+        <LiveHero />
+        <Suspense fallback={<SectionLoader />}>
+          <Showcase />
+          <Workflow />
+          <Contact />
+          <Footer />
+        </Suspense>
+      </main>
     </div>
   )
 }
@@ -29,16 +47,13 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f]">
-      <main>
-        <LiveHero />
-        <Suspense fallback={<SectionLoader />}>
-          <Showcase />
-          <Workflow />
-          <Contact />
-          <Footer />
-        </Suspense>
-      </main>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<SectionLoader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   )
 }
