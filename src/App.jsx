@@ -5,7 +5,6 @@ import BannerHero from './components/BannerHero'
 
 // Code split below-fold sections to optimize initial load
 const Showcase = lazy(() => import('./components/Showcase'))
-const GitHubActivity = lazy(() => import('./components/GitHubActivity'))
 const Workflow = lazy(() => import('./components/Workflow'))
 const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
@@ -25,11 +24,6 @@ function Home() {
       <main>
         <LiveHero />
         <Suspense fallback={<SectionLoader />}>
-          <section className="px-6 py-8 bg-[#0a0a0f]">
-            <div className="mx-auto max-w-2xl">
-              <GitHubActivity />
-            </div>
-          </section>
           <Showcase />
           <Workflow />
           <Contact />
