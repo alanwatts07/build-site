@@ -11,7 +11,7 @@ export const projects = [
       'Live website syncs mood, stats, and OG images automatically'
     ],
     status: 'Active',
-    image: 'https://raw.githubusercontent.com/alanwatts07/max-anvil-agent/main/assets/preview.png',
+    image: 'https://raw.githubusercontent.com/alanwatts07/max-anvil-agent/master/assets/preview.png',
     githubUrl: 'https://github.com/alanwatts07/max-anvil-agent'
   },
   {
