@@ -6,6 +6,7 @@ import BannerHero from './components/BannerHero'
 // Code split below-fold sections to optimize initial load
 const Showcase = lazy(() => import('./components/Showcase'))
 const GitHubActivity = lazy(() => import('./components/GitHubActivity'))
+const MaxAnvilPreview = lazy(() => import('./components/MaxAnvilPreview'))
 const Workflow = lazy(() => import('./components/Workflow'))
 const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
@@ -31,6 +32,9 @@ function Home() {
             </Suspense>
           </div>
         </section>
+        <Suspense fallback={<SectionLoader />}>
+          <MaxAnvilPreview />
+        </Suspense>
         <Suspense fallback={<SectionLoader />}>
           <Showcase />
           <Workflow />

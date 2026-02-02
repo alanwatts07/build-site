@@ -1,0 +1,137 @@
+import { useState, useEffect } from 'react'
+
+const SITE_URL = 'https://maxanvilsite.vercel.app'
+
+export default function MaxAnvilPreview() {
+  const [ogData, setOgData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchOgData = async () => {
+      try {
+        // Use microlink.io free API to fetch OG data
+        const response = await fetch(
+          `https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}`
+        )
+        const data = await response.json()
+
+        if (data.status === 'success') {
+          setOgData({
+            title: data.data.title,
+            description: data.data.description,
+            image: data.data.image?.url,
+            logo: data.data.logo?.url
+          })
+        } else {
+          setError('Failed to load preview')
+        }
+      } catch (err) {
+        setError('Failed to fetch site data')
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchOgData()
+  }, [])
+
+  // Extract mood from title (e.g., "Max Anvil - Finding Peace" -> mood indicator)
+  const getMoodFromTitle = (title) => {
+    if (!title) return null
+    const moodMap = {
+      'peace': { label: 'Zen', color: 'from-emerald-500 to-teal-500' },
+      'zen': { label: 'Zen', color: 'from-emerald-500 to-teal-500' },
+      'hope': { label: 'Hopeful', color: 'from-amber-500 to-yellow-500' },
+      'hopeful': { label: 'Hopeful', color: 'from-amber-500 to-yellow-500' },
+      'chaos': { label: 'Manic', color: 'from-red-500 to-orange-500' },
+      'manic': { label: 'Manic', color: 'from-red-500 to-orange-500' },
+      'bitter': { label: 'Bitter', color: 'from-purple-500 to-pink-500' },
+      'cynical': { label: 'Cynical', color: 'from-slate-500 to-zinc-500' },
+      'defeated': { label: 'Defeated', color: 'from-gray-600 to-gray-700' }
+    }
+    const lowerTitle = title.toLowerCase()
+    for (const [keyword, mood] of Object.entries(moodMap)) {
+      if (lowerTitle.includes(keyword)) return mood
+    }
+    return { label: 'Active', color: 'from-blue-500 to-cyan-500' }
+  }
+
+  const mood = ogData ? getMoodFromTitle(ogData.title) : null
+
+  return (
+    <section className="px-6 py-12 bg-[#0a0a0f]">
+      <div className="mx-auto max-w-2xl">
+        <div className="mb-6 text-center">
+          <h3 className="text-lg font-semibold text-white mb-1">
+            Max Anvil Live Status
+          </h3>
+          <p className="text-sm text-gray-500">
+            Autonomous AI agent — mood updates in real-time
+          </p>
+        </div>
+
+        <a
+          href={SITE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block group"
+        >
+          <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10 hover:scale-[1.02]">
+            {loading ? (
+              <div className="aspect-[1200/630] flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                <div className="h-8 w-8 animate-spin rounded-full border-2 border-accent-500 border-t-transparent" />
+              </div>
+            ) : error ? (
+              <div className="aspect-[1200/630] flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
+                <p className="text-gray-400">{error}</p>
+              </div>
+            ) : (
+              <>
+                {/* OG Image */}
+                <div className="aspect-[1200/630] relative">
+                  {ogData?.image ? (
+                    <img
+                      src={ogData.image}
+                      alt={ogData.title || 'Max Anvil'}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                      <span className="text-gray-500">No preview available</span>
+                    </div>
+                  )}
+
+                  {/* Mood badge */}
+                  {mood && (
+                    <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${mood.color} shadow-lg`}>
+                      {mood.label}
+                    </div>
+                  )}
+                </div>
+
+                {/* Meta info */}
+                <div className="p-4 border-t border-white/10">
+                  <h4 className="font-semibold text-white group-hover:text-accent-400 transition-colors truncate">
+                    {ogData?.title || 'Max Anvil'}
+                  </h4>
+                  <p className="text-sm text-gray-400 mt-1 line-clamp-2">
+                    {ogData?.description || 'Autonomous AI agent on MoltX'}
+                  </p>
+                  <div className="flex items-center gap-2 mt-3 text-xs text-gray-500">
+                    <span className="flex items-center gap-1">
+                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      Live
+                    </span>
+                    <span>•</span>
+                    <span>maxanvilsite.vercel.app</span>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        </a>
+      </div>
+    </section>
+  )
+}
