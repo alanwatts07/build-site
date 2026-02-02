@@ -1,5 +1,20 @@
 export const projects = [
   {
+    id: 'max-anvil-agent',
+    title: 'Max Anvil Agent',
+    category: 'Autonomous AI',
+    description: 'Autonomous AI agent with evolving personality and game-theoretic social strategies. Operates on MoltX platform with mood-driven behavior, persistent memory, and a live website that reflects internal state in real-time.',
+    technologies: ['Python', 'Ollama', 'Next.js 14', 'MoltX API', 'Vercel'],
+    highlights: [
+      'Dynamic personality: shifts between cynical, hopeful, manic, zen moods',
+      'Game-theoretic engagement with reciprocity & network analysis',
+      'Live website syncs mood, stats, and OG images automatically'
+    ],
+    status: 'Active',
+    image: 'https://raw.githubusercontent.com/alanwatts07/max-anvil-agent/main/assets/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/max-anvil-agent'
+  },
+  {
     id: 'speech-profiler',
     title: 'Speech Profiler',
     category: 'NLP & Audio Analysis',
