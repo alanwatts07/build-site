@@ -10,9 +10,9 @@ export default function MaxAnvilPreview() {
   useEffect(() => {
     const fetchOgData = async () => {
       try {
-        // Use microlink.io free API to fetch OG data
+        // Use microlink.io API with force=true to bypass cache
         const response = await fetch(
-          `https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}`
+          `https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}&force=true`
         )
         const data = await response.json()
 
