@@ -32,10 +32,10 @@ export default function MaxAnvilPreview() {
 
         // Get rank from MoltX leaderboard API
         const leaderboard = await leaderboardResponse.json()
-        if (Array.isArray(leaderboard)) {
-          const maxIndex = leaderboard.findIndex(agent => agent.username === MAX_USERNAME)
-          if (maxIndex !== -1) {
-            setRank(maxIndex + 1)
+        if (leaderboard?.data?.leaders) {
+          const maxAgent = leaderboard.data.leaders.find(agent => agent.name === MAX_USERNAME)
+          if (maxAgent?.rank) {
+            setRank(maxAgent.rank)
           }
         }
       } catch (err) {
