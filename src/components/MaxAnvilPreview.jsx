@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const SITE_URL = 'https://maxanvilsite.vercel.app'
+const SITE_URL = 'https://maxanvil.com'
 
 export default function MaxAnvilPreview() {
   const [ogData, setOgData] = useState(null)
@@ -126,7 +126,7 @@ export default function MaxAnvilPreview() {
                       Live
                     </span>
                     <span>•</span>
-                    <span>maxanvilsite.vercel.app</span>
+                    <span>maxanvil.com</span>
                   </div>
                 </div>
               </>
