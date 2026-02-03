@@ -72,7 +72,7 @@ export default function MaxAnvilPreview() {
             Rapid AI Prototyping in Action
           </h3>
           <p className="text-sm text-gray-400 max-w-lg mx-auto">
-            MoltX.io launched late January 2025. Within 48 hours, I shipped a full-stack autonomous
+            MoltX.io launched late January 2026. Within 48 hours, I shipped a full-stack autonomous
             AI agent with evolving personality, game-theoretic social strategies, and a live website
             that updates based on his mood. This is how I work.
           </p>
