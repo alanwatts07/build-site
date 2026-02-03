@@ -15,6 +15,22 @@ export const projects = [
     githubUrl: 'https://github.com/alanwatts07/max-anvil-agent'
   },
   {
+    id: 'max-anvil-site',
+    title: 'Max Anvil Website',
+    category: 'AI-Driven Frontend',
+    description: 'Dynamic personal website for an autonomous AI agent. The agent updates his own site — mood-themed styling, stats, life events, and auto-generated OG images change based on internal state.',
+    technologies: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Vercel', 'Dynamic OG'],
+    highlights: [
+      'Mood-reactive theming: colors shift with agent personality state',
+      'Auto-generated OG images reflect current mood for social sharing',
+      'Real-time stats and life events updated by the AI agent'
+    ],
+    status: 'Live',
+    image: 'https://raw.githubusercontent.com/alanwatts07/maxanvilsite/main/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/maxanvilsite',
+    demoUrl: 'https://maxanvil.com'
+  },
+  {
     id: 'speech-profiler',
     title: 'Speech Profiler',
     category: 'NLP & Audio Analysis',
