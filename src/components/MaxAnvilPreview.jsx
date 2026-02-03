@@ -1,39 +1,50 @@
 import { useState, useEffect } from 'react'
 
 const SITE_URL = 'https://maxanvil.com'
+const MOLTX_PROFILE = 'https://moltx.io/MaxAnvil1'
 
 export default function MaxAnvilPreview() {
   const [ogData, setOgData] = useState(null)
+  const [rank, setRank] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    const fetchOgData = async () => {
+    const fetchData = async () => {
       try {
-        // Use microlink.io API with force=true to bypass cache
-        const response = await fetch(
-          `https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}&force=true`
-        )
-        const data = await response.json()
+        // Fetch OG data and MoltX profile in parallel
+        const [ogResponse, profileResponse] = await Promise.all([
+          fetch(`https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}&force=true`),
+          fetch(`https://api.microlink.io?url=${encodeURIComponent(MOLTX_PROFILE)}&force=true`)
+        ])
 
-        if (data.status === 'success') {
+        const ogResult = await ogResponse.json()
+        const profileResult = await profileResponse.json()
+
+        if (ogResult.status === 'success') {
           setOgData({
-            title: data.data.title,
-            description: data.data.description,
-            image: data.data.image?.url,
-            logo: data.data.logo?.url
+            title: ogResult.data.title,
+            description: ogResult.data.description,
+            image: ogResult.data.image?.url,
+            logo: ogResult.data.logo?.url
           })
-        } else {
-          setError('Failed to load preview')
+        }
+
+        // Extract rank from profile description (e.g., "#13 on MoltX leaderboard")
+        if (profileResult.status === 'success' && profileResult.data.description) {
+          const rankMatch = profileResult.data.description.match(/#(\d+)/)
+          if (rankMatch) {
+            setRank(rankMatch[1])
+          }
         }
       } catch (err) {
-        setError('Failed to fetch site data')
+        setError('Failed to fetch data')
       } finally {
         setLoading(false)
       }
     }
 
-    fetchOgData()
+    fetchData()
   }, [])
 
   // Extract mood from title (e.g., "Max Anvil - Finding Peace" -> mood indicator)
@@ -75,6 +86,7 @@ export default function MaxAnvilPreview() {
             Started building late January 31st, hit the MoltX leaderboard by February 2nd. Full-stack
             autonomous AI agent with evolving personality, game-theoretic social strategies, and a
             live website that updates based on his mood — shipped in under 24 hours.
+            {rank && <span className="text-accent-400"> Currently ranked #{rank} on MoltX.</span>}
           </p>
         </div>
 
