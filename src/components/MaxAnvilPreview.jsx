@@ -66,15 +66,15 @@ export default function MaxAnvilPreview() {
           <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full bg-accent-500/10 border border-accent-500/20">
             <span className="text-xs font-medium text-accent-400">Case Study</span>
             <span className="text-xs text-gray-500">•</span>
-            <span className="text-xs text-gray-400">48-Hour Build</span>
+            <span className="text-xs text-gray-400">Under 24 Hours</span>
           </div>
           <h3 className="text-xl font-semibold text-white mb-2 sm:text-2xl">
             Rapid AI Prototyping in Action
           </h3>
           <p className="text-sm text-gray-400 max-w-lg mx-auto">
-            MoltX.io launched late January 2026. Within 48 hours, I shipped a full-stack autonomous
-            AI agent with evolving personality, game-theoretic social strategies, and a live website
-            that updates based on his mood. This is how I work.
+            Started building late January 31st, hit the MoltX leaderboard by February 2nd. Full-stack
+            autonomous AI agent with evolving personality, game-theoretic social strategies, and a
+            live website that updates based on his mood — shipped in under 24 hours.
           </p>
         </div>
 
