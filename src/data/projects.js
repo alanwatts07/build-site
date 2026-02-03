@@ -82,7 +82,7 @@ export const projects = [
     title: 'Predictive Maintenance Dashboard',
     category: 'Industrial IoT',
     description: 'Real-time bearing health monitoring dashboard with vibration analysis. Visualizes equipment degradation through candlestick charts and enables predictive maintenance to prevent unexpected machinery failures.',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'WebSocket'],
+    technologies: ['Next.js', 'TypeScript', 'FastAPI', 'MQTT', 'WebSocket'],
     highlights: [
       'Live candlestick charts with 1-second vibration RMS data',
       'Automatic health classification: HEALTHY → DEGRADING → CRITICAL',
