@@ -63,7 +63,7 @@ export default function MaxAnvilPreview() {
     <section className="px-6 py-12 bg-[#0a0a0f]">
       <div className="mx-auto max-w-2xl">
         <div className="mb-6 text-center">
-          <h3 className="text-lg font-semibold text-white mb-2">
+          <h3 className="text-xl font-semibold text-white mb-2 sm:text-2xl">
             Follow My AI Agent's Journey
           </h3>
           <p className="text-sm text-gray-400 max-w-lg mx-auto">
