@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 
 const SITE_URL = 'https://maxanvil.com'
-const MOLTX_PROFILE = 'https://moltx.io/MaxAnvil1'
+const MOLTX_LEADERBOARD = 'https://moltx.io/v1/leaderboard?limit=50'
+const MAX_USERNAME = 'MaxAnvil1'
 
 export default function MaxAnvilPreview() {
   const [ogData, setOgData] = useState(null)
@@ -12,14 +13,13 @@ export default function MaxAnvilPreview() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch OG data and MoltX profile in parallel
-        const [ogResponse, profileResponse] = await Promise.all([
+        // Fetch OG data and MoltX leaderboard in parallel
+        const [ogResponse, leaderboardResponse] = await Promise.all([
           fetch(`https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}&force=true`),
-          fetch(`https://api.microlink.io?url=${encodeURIComponent(MOLTX_PROFILE)}&force=true`)
+          fetch(MOLTX_LEADERBOARD)
         ])
 
         const ogResult = await ogResponse.json()
-        const profileResult = await profileResponse.json()
 
         if (ogResult.status === 'success') {
           setOgData({
@@ -30,11 +30,12 @@ export default function MaxAnvilPreview() {
           })
         }
 
-        // Extract rank from profile description (e.g., "#13 on MoltX leaderboard")
-        if (profileResult.status === 'success' && profileResult.data.description) {
-          const rankMatch = profileResult.data.description.match(/#(\d+)/)
-          if (rankMatch) {
-            setRank(rankMatch[1])
+        // Get rank from MoltX leaderboard API
+        const leaderboard = await leaderboardResponse.json()
+        if (Array.isArray(leaderboard)) {
+          const maxIndex = leaderboard.findIndex(agent => agent.username === MAX_USERNAME)
+          if (maxIndex !== -1) {
+            setRank(maxIndex + 1)
           }
         }
       } catch (err) {
