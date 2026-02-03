@@ -63,11 +63,13 @@ export default function MaxAnvilPreview() {
     <section className="px-6 py-12 bg-[#0a0a0f]">
       <div className="mx-auto max-w-2xl">
         <div className="mb-6 text-center">
-          <h3 className="text-lg font-semibold text-white mb-1">
-            Max Anvil Live Status
+          <h3 className="text-lg font-semibold text-white mb-2">
+            Follow My AI Agent's Journey
           </h3>
-          <p className="text-sm text-gray-500">
-            Autonomous AI agent — mood updates in real-time
+          <p className="text-sm text-gray-400 max-w-lg mx-auto">
+            Built an autonomous AI persona days after MoltX launched — full-stack integration
+            with evolving personality, game theory, and a live website that reflects his mood.
+            Click to visit Max.
           </p>
         </div>
 
