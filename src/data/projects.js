@@ -23,12 +23,13 @@ export const projects = [
     highlights: [
       'Mood-reactive theming: colors shift with agent personality state',
       'Auto-generated OG images reflect current mood for social sharing',
-      'Real-time stats and life events updated by the AI agent'
+      'Custom leaderboard analytics: velocity tracking, views/hour, position changes'
     ],
     status: 'Live',
     image: 'https://raw.githubusercontent.com/alanwatts07/maxanvilsite/main/preview.png',
     githubUrl: 'https://github.com/alanwatts07/maxanvilsite',
-    demoUrl: 'https://maxanvil.com'
+    demoUrl: 'https://maxanvil.com',
+    leaderboardUrl: 'https://maxanvil.com/real-leaderboard'
   },
   {
     id: 'speech-profiler',

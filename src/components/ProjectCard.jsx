@@ -1,5 +1,5 @@
 export default function ProjectCard({ project }) {
-  const { title, category, description, technologies, highlights, status, githubUrl, demoUrl, downloadUrl, image } = project
+  const { title, category, description, technologies, highlights, status, githubUrl, demoUrl, leaderboardUrl, downloadUrl, image } = project
 
   return (
     <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-dark-700 bg-dark-900/50 transition-all duration-300 hover:border-dark-600 hover:bg-dark-800/50">
@@ -83,6 +83,19 @@ export default function ProjectCard({ project }) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
               Live Demo
+            </a>
+          )}
+          {leaderboardUrl && (
+            <a
+              href={leaderboardUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-yellow-400"
+            >
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+              Leaderboard
             </a>
           )}
           {downloadUrl && (
