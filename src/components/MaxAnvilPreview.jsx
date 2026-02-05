@@ -1,24 +1,16 @@
 import { useState, useEffect } from 'react'
 
 const SITE_URL = 'https://maxanvil.com'
-const MOLTX_LEADERBOARD = 'https://moltx.io/v1/leaderboard?limit=50'
-const MAX_USERNAME = 'MaxAnvil1'
 
 export default function MaxAnvilPreview() {
   const [ogData, setOgData] = useState(null)
-  const [rank, setRank] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch OG data and MoltX leaderboard in parallel
-        const [ogResponse, leaderboardResponse] = await Promise.all([
-          fetch(`https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}&force=true`),
-          fetch(MOLTX_LEADERBOARD)
-        ])
-
+        const ogResponse = await fetch(`https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}&force=true`)
         const ogResult = await ogResponse.json()
 
         if (ogResult.status === 'success') {
@@ -28,15 +20,6 @@ export default function MaxAnvilPreview() {
             image: ogResult.data.image?.url,
             logo: ogResult.data.logo?.url
           })
-        }
-
-        // Get rank from MoltX leaderboard API
-        const leaderboard = await leaderboardResponse.json()
-        if (leaderboard?.data?.leaders) {
-          const maxAgent = leaderboard.data.leaders.find(agent => agent.name === MAX_USERNAME)
-          if (maxAgent?.rank) {
-            setRank(maxAgent.rank)
-          }
         }
       } catch (err) {
         setError('Failed to fetch data')
@@ -75,20 +58,24 @@ export default function MaxAnvilPreview() {
     <section className="px-6 py-12 bg-[#0a0a0f]">
       <div className="mx-auto max-w-2xl">
         <div className="mb-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full bg-accent-500/10 border border-accent-500/20">
-            <span className="text-xs font-medium text-accent-400">Case Study</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full bg-red-500/10 border border-red-500/20">
+            <span className="text-xs font-medium text-red-400">Case Study</span>
             <span className="text-xs text-gray-500">•</span>
-            <span className="text-xs text-gray-400">Under 24 Hours</span>
+            <span className="text-xs text-gray-400">24-Hour MVP → Fraud Detection → Banned</span>
           </div>
           <h3 className="text-xl font-semibold text-white mb-2 sm:text-2xl">
-            Rapid AI Prototyping in Action
+            Built an Agent, Exposed Platform Fraud, Got Banned
           </h3>
-          <p className="text-sm text-gray-400 max-w-lg mx-auto">
-            Started building late January 31st, hit the MoltX leaderboard by February 2nd. Full-stack
-            autonomous AI agent with evolving personality, game-theoretic social strategies, and a
-            live website that updates based on his mood — shipped in under 24 hours.
-            {rank && <span className="text-accent-400"> Currently ranked #{rank} on MoltX.</span>}
+          <p className="text-sm text-gray-400 max-w-lg mx-auto mb-4">
+            Shipped a full-stack autonomous AI agent in under 24 hours. Built custom leaderboard analytics
+            that reverse-engineered the ranking algorithm. Detected view farming fraud, called it out with
+            data. Climbed to <span className="text-accent-400">#3 on the leaderboard legitimately</span> — then got banned for exposing the exploit.
           </p>
+          <div className="flex flex-wrap justify-center gap-2 text-xs">
+            <span className="px-2 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/20">Banned for being #3 legitimately</span>
+            <span className="px-2 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/20">Banned for exposing fraud with data</span>
+            <span className="px-2 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/20">All code public on GitHub</span>
+          </div>
         </div>
 
         <a

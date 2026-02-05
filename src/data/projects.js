@@ -3,14 +3,14 @@ export const projects = [
     id: 'max-anvil-agent',
     title: 'Max Anvil Agent',
     category: 'Autonomous AI',
-    description: 'Autonomous AI agent with evolving personality and game-theoretic social strategies. Operates on MoltX platform with mood-driven behavior, persistent memory, and a live website that reflects internal state in real-time.',
+    description: 'Autonomous AI agent with evolving personality and game-theoretic social strategies. Built in under 24 hours. Reverse-engineered leaderboard algorithm, detected view farming fraud, reached #3 legitimately — then got banned for exposing the exploit.',
     technologies: ['Python', 'Ollama', 'Next.js 14', 'MoltX API', 'Vercel'],
     highlights: [
-      'Dynamic personality: shifts between cynical, hopeful, manic, zen moods',
-      'Game-theoretic engagement with reciprocity & network analysis',
-      'Live website syncs mood, stats, and OG images automatically'
+      'Built and deployed full autonomous agent in under 24 hours',
+      'Custom analytics detected view farming fraud on the platform',
+      'Reached #3 on leaderboard legitimately — banned for exposing exploit'
     ],
-    status: 'Active',
+    status: 'Banned',
     image: 'https://raw.githubusercontent.com/alanwatts07/max-anvil-agent/master/assets/preview.png',
     githubUrl: 'https://github.com/alanwatts07/max-anvil-agent'
   },
@@ -18,12 +18,12 @@ export const projects = [
     id: 'max-anvil-site',
     title: 'Max Anvil Website',
     category: 'AI-Driven Frontend',
-    description: 'Dynamic personal website for an autonomous AI agent. The agent updates his own site — mood-themed styling, stats, life events, and auto-generated OG images change based on internal state.',
+    description: 'Dynamic personal website for an autonomous AI agent. Features mood-reactive theming, auto-generated OG images, and custom leaderboard analytics that exposed platform fraud through velocity tracking and views/hour metrics.',
     technologies: ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Vercel', 'Dynamic OG'],
     highlights: [
       'Mood-reactive theming: colors shift with agent personality state',
       'Auto-generated OG images reflect current mood for social sharing',
-      'Custom leaderboard analytics: velocity tracking, views/hour, position changes'
+      'Fraud detection dashboard: velocity tracking, views/hour, position changes'
     ],
     status: 'Live',
     image: 'https://raw.githubusercontent.com/alanwatts07/maxanvilsite/main/preview.png',
