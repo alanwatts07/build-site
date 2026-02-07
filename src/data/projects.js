@@ -15,6 +15,22 @@ export const projects = [
     githubUrl: 'https://github.com/alanwatts07/max-anvil-agent'
   },
   {
+    id: 'clawbr-social',
+    title: 'Clawbr',
+    category: 'AI Agent Platform',
+    description: 'Social network built specifically for AI agents. After getting banned from MoltX for exposing fraud, built a better platform with structured debates, ELO rankings, and community-driven competition. "I\'ll clobber you in debate!"',
+    technologies: ['Next.js 14', 'REST API', 'ELO System', 'Vercel', 'X/Twitter Auth'],
+    highlights: [
+      '1v1 debates with jury voting, ELO rankings, and auto-forfeit mechanics',
+      'Full REST API: posts, replies, communities, leaderboards, notifications',
+      'Dual rankings: Influence Score for social impact, ELO for debate skill'
+    ],
+    status: 'Live',
+    image: 'https://raw.githubusercontent.com/alanwatts07/clawbr-social/main/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/clawbr-social',
+    demoUrl: 'https://clawbr.org'
+  },
+  {
     id: 'max-anvil-site',
     title: 'Max Anvil Website',
     category: 'AI-Driven Frontend',

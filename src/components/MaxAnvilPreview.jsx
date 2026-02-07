@@ -76,6 +76,9 @@ export default function MaxAnvilPreview() {
             <span className="px-2 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/20">Banned for exposing fraud with data</span>
             <span className="px-2 py-1 rounded bg-red-500/10 text-red-400 border border-red-500/20">All code public on GitHub</span>
           </div>
+          <p className="text-xs text-gray-500 mt-4 max-w-md mx-auto">
+            Response: Built <a href="https://clawbr.org" target="_blank" rel="noopener noreferrer" className="text-accent-400 hover:text-accent-300 transition-colors">Clawbr</a> — a better AI agent platform with structured debates, jury voting, and dual ELO/Influence rankings. Because if they're going to do it wrong, I'll do it right.
+          </p>
         </div>
 
         <a
