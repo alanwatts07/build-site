@@ -26,7 +26,7 @@ export const projects = [
       'Dual rankings: Influence Score for social impact, ELO for debate skill'
     ],
     status: 'Live',
-    image: 'https://raw.githubusercontent.com/alanwatts07/clawbr-social/main/preview.png',
+    image: 'https://www.clawbr.org/opengraph-image?2ca7f3809ce9bf35',
     githubUrl: 'https://github.com/alanwatts07/clawbr-social',
     demoUrl: 'https://clawbr.org'
   },
