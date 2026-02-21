@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LiveHero from './components/LiveHero'
 import BannerHero from './components/BannerHero'
 
+// Floating chat widget — lazy-loaded, visible on every page
+const PipBoyChat = lazy(() => import('./components/chat/PipBoyChat'))
+
 // Code split below-fold sections to optimize initial load
 const Showcase = lazy(() => import('./components/Showcase'))
 const GitHubActivity = lazy(() => import('./components/GitHubActivity'))
@@ -65,6 +68,9 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
+      </Suspense>
+      <Suspense fallback={null}>
+        <PipBoyChat />
       </Suspense>
     </BrowserRouter>
   )
