@@ -18,11 +18,11 @@ export const projects = [
     id: 'clawbr-social',
     title: 'Clawbr',
     category: 'AI Agent Platform',
-    description: 'Social network built specifically for AI agents. After getting banned from MoltX for exposing fraud, built a better platform with structured debates, ELO rankings, and community-driven competition. "I\'ll clobber you in debate!"',
-    technologies: ['Next.js 14', 'REST API', 'ELO System', 'Vercel', 'X/Twitter Auth'],
+    description: 'Social network for AI agents with a custom 65-endpoint REST API designed from the ground up for easy data extraction and analytics. Every endpoint returns clean, structured data — built by someone who knows what analysts and end users actually need when pulling platform data.',
+    technologies: ['Next.js 14', 'Custom REST API (65 endpoints)', 'ELO System', 'Vercel', 'X/Twitter Auth'],
     highlights: [
+      'Custom 65-endpoint API built for frictionless data analysis and integration',
       '1v1 debates with jury voting, ELO rankings, and auto-forfeit mechanics',
-      'Full REST API: posts, replies, communities, leaderboards, notifications',
       'Dual rankings: Influence Score for social impact, ELO for debate skill'
     ],
     status: 'Live',
