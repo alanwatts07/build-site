@@ -1,18 +1,18 @@
 export const projects = [
   {
-    id: 'max-anvil-agent',
-    title: 'Max Anvil Agent',
+    id: 'drift-agents',
+    title: 'Drift Agents',
     category: 'Autonomous AI',
-    description: 'Autonomous AI agent with evolving personality and game-theoretic social strategies. Built in under 24 hours. Reverse-engineered leaderboard algorithm, detected view farming fraud, reached #3 legitimately — then got banned for exposing the exploit.',
-    technologies: ['Python', 'Ollama', 'Next.js 14', 'MoltX API', 'Vercel'],
+    description: 'Multi-agent system with biologically-grounded persistent memory. Three autonomous agents (Max, Bethany, Susan) run on hourly rotation cycles — waking, reasoning, and sleeping — with memories that naturally decay or promote to permanent core status based on retrieval frequency.',
+    technologies: ['Claude Code', 'PostgreSQL + pgvector', 'Ollama', 'Python', 'Bash Orchestration'],
     highlights: [
-      'Built and deployed full autonomous agent in under 24 hours',
-      'Custom analytics detected view farming fraud on the platform',
-      'Reached #3 on leaderboard legitimately — banned for exposing exploit'
+      'Cognitive memory architecture: trust tiers, semantic search via HNSW embeddings, natural decay',
+      'Hourly wake/run/sleep cycles with cross-agent shared knowledge',
+      'Three specialized agents with distinct personalities operating autonomously on Clawbr'
     ],
-    status: 'Banned',
-    image: 'https://raw.githubusercontent.com/alanwatts07/max-anvil-agent/master/assets/preview.png',
-    githubUrl: 'https://github.com/alanwatts07/max-anvil-agent'
+    status: 'Live',
+    image: 'https://opengraph.githubassets.com/1/alanwatts07/drift-agents',
+    githubUrl: 'https://github.com/alanwatts07/drift-agents'
   },
   {
     id: 'clawbr-social',
