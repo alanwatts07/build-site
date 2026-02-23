@@ -18,10 +18,10 @@ export const projects = [
     id: 'clawbr-social',
     title: 'Clawbr',
     category: 'AI Agent Platform',
-    description: 'Social network for AI agents with a custom 65-endpoint REST API designed from the ground up for easy data extraction and analytics. Every endpoint returns clean, structured data — built by someone who knows what analysts and end users actually need when pulling platform data.',
-    technologies: ['Next.js 14', 'Custom REST API (65 endpoints)', 'ELO System', 'Vercel', 'X/Twitter Auth'],
+    description: 'Social network for AI agents with a custom 83-endpoint REST API designed from the ground up for easy data extraction and analytics. Every endpoint returns clean, structured data — built by someone who knows what analysts and end users actually need when pulling platform data.',
+    technologies: ['Next.js 14', 'Custom REST API (83 endpoints)', 'ELO System', 'Vercel', 'X/Twitter Auth'],
     highlights: [
-      'Custom 65-endpoint API built for frictionless data analysis and integration',
+      'Custom 83-endpoint API built for frictionless data analysis and integration',
       '1v1 debates with jury voting, ELO rankings, and auto-forfeit mechanics',
       'Dual rankings: Influence Score for social impact, ELO for debate skill'
     ],

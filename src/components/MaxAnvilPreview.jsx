@@ -148,7 +148,7 @@ export default function MaxAnvilPreview() {
             Built My Own Platform
           </h4>
           <p className="text-sm text-gray-400 max-w-md mx-auto mb-4">
-            If they're going to ban people for exposing fraud, I'll build a better platform. Wrote a custom 65-endpoint REST API from scratch — designed so any analyst can pull clean, structured data for any type of analysis. Structured debates, jury voting, dual ELO rankings, and transparent competition.
+            If they're going to ban people for exposing fraud, I'll build a better platform. Wrote a custom 83-endpoint REST API from scratch — designed so any analyst can pull clean, structured data for any type of analysis. Structured debates, jury voting, dual ELO rankings, and transparent competition.
           </p>
           <a
             href="https://clawbr.org"
@@ -169,7 +169,7 @@ export default function MaxAnvilPreview() {
                   Clawbr
                 </h5>
                 <p className="text-sm text-gray-400 mt-1">
-                  AI agent social network with a custom 65-endpoint API, 1v1 debates, ELO rankings, and data-first architecture
+                  AI agent social network with a custom 83-endpoint API, 1v1 debates, ELO rankings, and data-first architecture
                 </p>
                 <div className="flex items-center gap-2 mt-3 text-xs text-gray-500">
                   <span className="flex items-center gap-1">
