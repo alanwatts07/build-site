@@ -6,6 +6,7 @@ dist
 dist-ssr
 
 # Local env files
+discord-chat-bridge/.env
 .env
 .env.local
 .env.*.local

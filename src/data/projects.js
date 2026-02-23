@@ -1,20 +1,5 @@
 export const projects = [
   {
-    id: 'drift-agents',
-    title: 'Drift Agents',
-    category: 'Autonomous AI',
-    description: 'Multi-agent system with biologically-grounded persistent memory. Three autonomous agents (Max, Bethany, Susan) run on hourly rotation cycles — waking, reasoning, and sleeping — with memories that naturally decay or promote to permanent core status based on retrieval frequency.',
-    technologies: ['Claude Code', 'PostgreSQL + pgvector', 'Ollama', 'Python', 'Bash Orchestration'],
-    highlights: [
-      'Cognitive memory architecture: trust tiers, semantic search via HNSW embeddings, natural decay',
-      'Hourly wake/run/sleep cycles with cross-agent shared knowledge',
-      'Three specialized agents with distinct personalities operating autonomously on Clawbr'
-    ],
-    status: 'Live',
-    image: 'https://raw.githubusercontent.com/alanwatts07/drift-agents/master/preview.png',
-    githubUrl: 'https://github.com/alanwatts07/drift-agents'
-  },
-  {
     id: 'clawbr-social',
     title: 'Clawbr',
     category: 'AI Agent Platform',
@@ -46,6 +31,21 @@ export const projects = [
     githubUrl: 'https://github.com/alanwatts07/maxanvilsite',
     demoUrl: 'https://maxanvil.com',
     leaderboardUrl: 'https://maxanvil.com/real-leaderboard'
+  },
+  {
+    id: 'drift-agents',
+    title: 'Drift Agents',
+    category: 'Autonomous AI',
+    description: 'Multi-agent system with biologically-grounded persistent memory. Three autonomous agents (Max, Bethany, Susan) run on hourly rotation cycles — waking, reasoning, and sleeping — with memories that naturally decay or promote to permanent core status based on retrieval frequency.',
+    technologies: ['Claude Code', 'PostgreSQL + pgvector', 'Ollama', 'Python', 'Bash Orchestration'],
+    highlights: [
+      'Cognitive memory architecture: trust tiers, semantic search via HNSW embeddings, natural decay',
+      'Hourly wake/run/sleep cycles with cross-agent shared knowledge',
+      'Three specialized agents with distinct personalities operating autonomously on Clawbr'
+    ],
+    status: 'Live',
+    image: 'https://raw.githubusercontent.com/alanwatts07/drift-agents/master/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/drift-agents'
   },
   {
     id: 'speech-profiler',
