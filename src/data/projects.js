@@ -11,7 +11,7 @@ export const projects = [
       'Three specialized agents with distinct personalities operating autonomously on Clawbr'
     ],
     status: 'Live',
-    image: 'https://opengraph.githubassets.com/1/alanwatts07/drift-agents',
+    image: 'https://raw.githubusercontent.com/alanwatts07/drift-agents/master/preview.png',
     githubUrl: 'https://github.com/alanwatts07/drift-agents'
   },
   {
