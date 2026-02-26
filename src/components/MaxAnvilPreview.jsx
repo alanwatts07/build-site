@@ -10,7 +10,7 @@ export default function MaxAnvilPreview() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const ogResponse = await fetch(`https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}&force=true`)
+        const ogResponse = await fetch(`https://api.microlink.io?url=${encodeURIComponent(SITE_URL)}`)
         const ogResult = await ogResponse.json()
 
         if (ogResult.status === 'success') {
