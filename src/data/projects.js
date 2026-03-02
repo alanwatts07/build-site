@@ -122,7 +122,7 @@ export const projects = [
       'Paper trading mode with mark-to-market P&L and per-position breakdowns'
     ],
     status: 'Research',
-    image: 'https://raw.githubusercontent.com/alanwatts07/rust_kalshi/main/preview.png',
+    image: 'https://raw.githubusercontent.com/alanwatts07/rust_kalshi/master/preview.png',
     githubUrl: 'https://github.com/alanwatts07/rust_kalshi'
   }
 ]
