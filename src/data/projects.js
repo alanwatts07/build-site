@@ -61,7 +61,7 @@ export const projects = [
     status: 'Windows App',
     image: 'https://raw.githubusercontent.com/alanwatts07/SpeechProfilerWindows/master/screenshot.png',
     githubUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows',
-    downloadUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows/releases/download/v1.0/SpeechProfiler.zip'
+    downloadUrl: 'https://github.com/alanwatts07/SpeechProfilerWindows/archive/refs/tags/v1.1.zip'
   },
   {
     id: 'whistleblower-workbench',
