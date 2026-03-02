@@ -88,7 +88,7 @@ export const projects = [
     highlights: [
       'Custom TCN with causal convolutions & attention mechanisms',
       '200+ engineered features: technicals, microstructure, order flow',
-      'Walk-forward validation: 90.5% long win rate (no lookahead bias)'
+      'Walk-forward validation with online probability calibration (no lookahead bias)'
     ],
     status: 'Research',
     image: 'https://raw.githubusercontent.com/alanwatts07/tcn-trading-bot/main/Screenshot.png',
@@ -109,5 +109,20 @@ export const projects = [
     image: 'https://raw.githubusercontent.com/alanwatts07/predictive-maintenance-dashboard-poc/master/docs/preview.png',
     githubUrl: 'https://github.com/alanwatts07/predictive-maintenance-dashboard-poc',
     demoUrl: 'https://frontend-two-ashy-yla6dtp7w4.vercel.app'
+  },
+  {
+    id: 'rust-kalshi',
+    title: 'Kalshi Trading Engine',
+    category: 'Quantitative Finance',
+    description: 'High-frequency trading engine for Kalshi prediction markets built in Rust. Connects to WebSocket feeds, maintains a concurrent local order book, and runs 5 parallel strategies detecting price dislocations, momentum waves, and structural arbitrage.',
+    technologies: ['Rust', 'WebSocket', 'DashMap', 'RSA-PSS Auth', 'Clap'],
+    highlights: [
+      '5 parallel strategies: momentum, surge reversion, sum-to-100, cross-strike, volatility',
+      'Lock-free concurrent order book with quarter-Kelly position sizing',
+      'Paper trading mode with mark-to-market P&L and per-position breakdowns'
+    ],
+    status: 'Research',
+    image: 'https://raw.githubusercontent.com/alanwatts07/rust_kalshi/main/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/rust_kalshi'
   }
 ]
