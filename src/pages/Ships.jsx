@@ -136,12 +136,20 @@ export default function Ships() {
             >
               View GitHub Profile
             </a>
-            <Link
-              to="/#contact"
+            <a
+              href="mailto:me@mattcorwin.dev"
               className="px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-gray-300 hover:text-white rounded-lg text-sm font-medium transition-all"
             >
-              Get in Touch
-            </Link>
+              Email Me
+            </a>
+            <a
+              href="https://www.linkedin.com/in/matthew-corwin-b38347a8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-gray-300 hover:text-white rounded-lg text-sm font-medium transition-all"
+            >
+              LinkedIn
+            </a>
           </div>
         </section>
       </main>
