@@ -120,6 +120,12 @@ export default function LiveHero() {
             >
               About Me
             </Link>
+            <Link
+              to="/ships"
+              className="px-6 py-3 border border-emerald-500/30 hover:border-emerald-500/60 text-emerald-300 hover:text-white rounded-lg text-sm font-medium transition-all"
+            >
+              What I Ship
+            </Link>
             <a
               href="#contact"
               className="px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-gray-300 hover:text-white rounded-lg text-sm font-medium transition-all"

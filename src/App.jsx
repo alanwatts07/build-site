@@ -14,6 +14,7 @@ const Workflow = lazy(() => import('./components/Workflow'))
 const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
 const About = lazy(() => import('./pages/About'))
+const Ships = lazy(() => import('./pages/Ships'))
 
 function SectionLoader() {
   return (
@@ -67,6 +68,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/ships" element={<Ships />} />
         </Routes>
       </Suspense>
       <Suspense fallback={null}>
