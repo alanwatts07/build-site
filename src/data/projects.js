@@ -124,5 +124,20 @@ export const projects = [
     status: 'Research',
     image: 'https://raw.githubusercontent.com/alanwatts07/rust_kalshi/master/preview.png',
     githubUrl: 'https://github.com/alanwatts07/rust_kalshi'
+  },
+  {
+    id: 'kalshi-weather',
+    title: 'Kalshi Weather Bot',
+    category: 'Quantitative Finance',
+    description: 'Automated trading CLI for Kalshi temperature prediction markets. Uses GFS 31-member ensemble forecasts with MOS-style bias correction to detect pricing edges, then sizes positions with quarter-Kelly and verifies order book liquidity before execution.',
+    technologies: ['Python', 'GFS Ensemble', 'MOS Bias Correction', 'Kelly Criterion', 'Kalshi API'],
+    highlights: [
+      'Gaussian ensemble probability vs market-implied edge detection (8%+ threshold)',
+      'MOS-style bias correction trained on 12 months of forecast-vs-actual data',
+      'Quarter-Kelly position sizing with real order book liquidity verification'
+    ],
+    status: 'Live Trading',
+    image: 'https://raw.githubusercontent.com/alanwatts07/kalshiweather/master/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/kalshiweather'
   }
 ]

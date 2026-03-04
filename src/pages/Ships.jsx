@@ -72,7 +72,7 @@ export default function Ships() {
           </p>
 
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-indigo-500/10 border border-indigo-500/30 mb-6">
-            <span className="text-indigo-400 font-semibold">7 projects shipped in under 2 months.</span>
+            <span className="text-indigo-400 font-semibold">8 projects shipped in under 2 months.</span>
             <span className="text-gray-500 text-sm">Commit history proves it.</span>
           </div>
 

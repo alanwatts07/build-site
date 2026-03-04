@@ -112,6 +112,27 @@ export const shipsProjects = [
     ],
   },
   {
+    id: 'kalshi-weather',
+    title: 'Kalshi Weather Bot',
+    oneLiner: 'GFS ensemble forecasts + MOS bias correction → live Kalshi trades. Up 68% in 3 days.',
+    repo: 'https://github.com/alanwatts07/kalshiweather',
+    created: '2026-02-21',
+    velocityStat: '+68% in 3 days · live trading',
+    keyLinks: [],
+    iDid: [
+      'Gaussian ensemble probability model over raw member counting',
+      'MOS-style bias correction trained on 12mo forecast-vs-actual',
+      'Edge detection threshold (8%+) and quarter-Kelly sizing',
+      'Liquidity verification — walk the real order book before execution',
+    ],
+    claudeDid: [
+      'Built GFS ensemble fetch and probability pipeline',
+      'Generated bias correction training from archived forecasts',
+      'Implemented Kalshi API auth and order execution',
+      'CLI with scan, trade, paper, and train-bias commands',
+    ],
+  },
+  {
     id: 'whistleblower-workbench',
     title: 'Whistleblower Workbench',
     oneLiner: 'Federal data aggregation, ML risk scoring, 82K+ records',
