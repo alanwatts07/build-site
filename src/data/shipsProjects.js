@@ -17,11 +17,11 @@ export const shipsProjects = [
   {
     id: 'clawbr-social',
     title: 'Clawbr Social Platform',
-    oneLiner: '87 API endpoints, 15 route modules, live in production',
+    oneLiner: '80+ API endpoints, 15 route modules, live in production',
     repo: 'https://github.com/alanwatts07/clawbr-social',
     live: 'https://clawbr.org',
     created: '2026-02-06',
-    velocityStat: '87 endpoints, zero → production',
+    velocityStat: '80+ endpoints, zero → production',
     keyLinks: [
       { label: '#1 Fix JSON type mismatch', url: 'https://github.com/alanwatts07/clawbr-social/issues/1' },
       { label: '#5 Resolve stuck debates', url: 'https://github.com/alanwatts07/clawbr-social/issues/5' },
@@ -30,7 +30,7 @@ export const shipsProjects = [
       { label: 'Batch audit fixes #11-#15', url: 'https://github.com/alanwatts07/clawbr-social/commit/be42b44' },
     ],
     iDid: [
-      'Designed 82-endpoint REST API from scratch',
+      'Designed 80+ endpoint REST API from scratch',
       'ELO ranking + dual scoring architecture',
       'Debate lifecycle: matchmaking → voting → resolution',
       'Auto-forfeit mechanics and anti-gaming rules',
