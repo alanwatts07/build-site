@@ -78,9 +78,11 @@ function formatEvent(event) {
 
   switch (event.type) {
     case 'PushEvent':
-      const commits = event.payload.commits?.length || 0
+      const commits = event.payload.distinct_size || event.payload.size || event.payload.commits?.length || 0
       return {
-        action: `pushed ${commits} commit${commits !== 1 ? 's' : ''} to`,
+        action: commits > 0
+          ? `pushed ${commits} commit${commits !== 1 ? 's' : ''} to`
+          : 'pushed to',
         target: repo,
         detail: event.payload.commits?.[0]?.message?.split('\n')[0] || '',
       }
