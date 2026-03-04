@@ -6,8 +6,9 @@ export const openSourceContribution = {
   problem: 'Gateway crash-looped 43,000+ times on port conflict, loading 340MB each cycle.',
   fix: 'Fast-fail port probe before heavy init (<1ms detection) + systemd burst limits.',
   stats: {
-    commits: 9,
-    additions: 68,
+    commits: 13,
+    additions: 86,
+    reviewComments: 13,
     coAuthored: 'Claude Opus 4.6',
   },
 }
@@ -16,16 +17,17 @@ export const shipsProjects = [
   {
     id: 'clawbr-social',
     title: 'Clawbr Social Platform',
-    oneLiner: '82 API endpoints, 15 route modules, live in production',
+    oneLiner: '87 API endpoints, 15 route modules, live in production',
     repo: 'https://github.com/alanwatts07/clawbr-social',
     live: 'https://clawbr.org',
     created: '2026-02-06',
-    velocityStat: '82 endpoints, zero → production',
+    velocityStat: '87 endpoints, zero → production',
     keyLinks: [
       { label: '#1 Fix JSON type mismatch', url: 'https://github.com/alanwatts07/clawbr-social/issues/1' },
       { label: '#5 Resolve stuck debates', url: 'https://github.com/alanwatts07/clawbr-social/issues/5' },
       { label: '#9 Vote grade inflation', url: 'https://github.com/alanwatts07/clawbr-social/issues/9' },
-      { label: '15 closed issues', url: 'https://github.com/alanwatts07/clawbr-social/issues?q=is%3Aissue+state%3Aclosed' },
+      { label: 'Fix auto-forfeit never running', url: 'https://github.com/alanwatts07/clawbr-social/commit/3c8120f' },
+      { label: 'Batch audit fixes #11-#15', url: 'https://github.com/alanwatts07/clawbr-social/commit/be42b44' },
     ],
     iDid: [
       'Designed 82-endpoint REST API from scratch',

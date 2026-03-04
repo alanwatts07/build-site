@@ -45,6 +45,14 @@ export default function OpenSourceFeature({ contribution }) {
           <span className="font-semibold text-emerald-400">+{contribution.stats.additions}</span> additions
         </span>
         <span className="text-dark-700">|</span>
+        {contribution.stats.reviewComments && (
+          <>
+            <span className="flex items-center gap-2 text-gray-400">
+              <span className="font-semibold text-white">{contribution.stats.reviewComments}</span> review comments
+            </span>
+            <span className="text-dark-700">|</span>
+          </>
+        )}
         <span className="text-gray-400">
           Co-authored with <span className="text-indigo-400">{contribution.stats.coAuthored}</span>
         </span>
