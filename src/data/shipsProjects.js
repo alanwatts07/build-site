@@ -142,7 +142,10 @@ export const shipsProjects = [
     live: 'https://false-claims-suite.vercel.app',
     created: '2026-01-23',
     velocityStat: '82K+ records · ML risk scoring pipeline',
-    keyLinks: [],
+    keyLinks: [
+      { label: 'Fix contractor vetting fallback', url: 'https://github.com/alanwatts07/whistleblower-workbench/commit/5c628ea' },
+      { label: 'Fix pharma payments null ref', url: 'https://github.com/alanwatts07/whistleblower-workbench/commit/4df3566' },
+    ],
     iDid: [
       'Designed fraud detection data model',
       'USASpending.gov integration strategy',
@@ -163,7 +166,10 @@ export const shipsProjects = [
     repo: 'https://github.com/alanwatts07/tcn-trading-bot',
     created: '2026-01-23',
     velocityStat: '200+ engineered features · real-time inference',
-    keyLinks: [],
+    keyLinks: [
+      { label: 'Protect calibration from corruption', url: 'https://github.com/alanwatts07/tcn-trading-bot/commit/f3cca85' },
+      { label: 'Asymmetric short deadbands', url: 'https://github.com/alanwatts07/tcn-trading-bot/commit/ec35cd3' },
+    ],
     iDid: [
       'Designed TCN architecture with causal convolutions',
       'Feature engineering: technicals, microstructure, order flow',
@@ -184,7 +190,9 @@ export const shipsProjects = [
     repo: 'https://github.com/alanwatts07/SpeechProfilerWindows',
     created: '2026-01-31',
     velocityStat: 'Multi-model pipeline · real-time processing',
-    keyLinks: [],
+    keyLinks: [
+      { label: 'Dual-perspective deception analysis', url: 'https://github.com/alanwatts07/SpeechProfilerWindows/commit/e80a556' },
+    ],
     iDid: [
       'Designed multi-model audio pipeline architecture',
       'Ellipses Manual methodology integration',
