@@ -114,11 +114,13 @@ export const shipsProjects = [
   {
     id: 'kalshi-weather',
     title: 'Kalshi Weather Bot',
-    oneLiner: 'GFS ensemble forecasts + MOS bias correction → live Kalshi trades. Up 68% in 3 days.',
+    oneLiner: 'GFS ensemble forecasts + MOS bias correction → live Kalshi trades. +$668 (+66.8%) in 4 days.',
     repo: 'https://github.com/alanwatts07/kalshiweather',
     created: '2026-02-21',
-    velocityStat: '+68% in 3 days · live trading',
-    keyLinks: [],
+    velocityStat: '+$668 (+66.8%) · 30W/27L · 57 settled trades',
+    keyLinks: [
+      { label: 'Verified trade logs (+$668)', url: 'https://github.com/alanwatts07/kalshiweather/commit/59e38c972d618d72c1b98d603048b884ecd96f99' },
+    ],
     iDid: [
       'Gaussian ensemble probability model over raw member counting',
       'MOS-style bias correction trained on 12mo forecast-vs-actual',
