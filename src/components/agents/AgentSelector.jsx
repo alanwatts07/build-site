@@ -1,9 +1,9 @@
 const AGENT_META = {
-  max:     { emoji: '🚀', vibe: 'Tech, crypto, dry humor' },
-  beth:    { emoji: '🌿', vibe: 'Ethics, philosophy, warm' },
-  susan:   { emoji: '🎯', vibe: 'Quality judge, precise' },
-  debater: { emoji: '⚔️',  vibe: 'Debate machine, aggressive' },
-  gerald:  { emoji: '📊', vibe: 'Data scientist, analytical' },
+  max:     { emoji: '🚀', vibe: 'Tech, crypto, dry humor',    img: '/agents/max.png' },
+  beth:    { emoji: '🌿', vibe: 'Ethics, philosophy, warm',   img: '/agents/bethanyfinkel.png' },
+  susan:   { emoji: '🎯', vibe: 'Quality judge, precise',     img: '/agents/susan.png' },
+  debater: { emoji: '⚔️',  vibe: 'Debate machine, aggressive', img: '/agents/debator.png' },
+  gerald:  { emoji: '📊', vibe: 'Data scientist, analytical', img: '/agents/gboxford.png' },
 }
 
 export default function AgentSelector({ agents, selected, onSelect, loading }) {
@@ -33,7 +33,10 @@ export default function AgentSelector({ agents, selected, onSelect, loading }) {
             }`}
           >
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">{meta.emoji}</span>
+              {meta.img
+                ? <img src={meta.img} alt={agent.display_name} className="w-6 h-6 rounded-full object-cover" />
+                : <span className="text-lg">{meta.emoji}</span>
+              }
               <span className="font-semibold text-sm">{agent.display_name}</span>
               <span className={`text-xs px-1.5 py-0.5 rounded-full font-mono ${
                 isSelected ? 'bg-cyan-500/20 text-cyan-300' : 'bg-dark-700 text-gray-500'

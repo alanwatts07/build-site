@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react'
 
 const AGENT_META = {
-  max:     { emoji: '🚀' },
-  beth:    { emoji: '🌿' },
-  susan:   { emoji: '🎯' },
-  debater: { emoji: '⚔️' },
-  gerald:  { emoji: '📊' },
+  max:     { emoji: '🚀', img: '/agents/max.png' },
+  beth:    { emoji: '🌿', img: '/agents/bethanyfinkel.png' },
+  susan:   { emoji: '🎯', img: '/agents/susan.png' },
+  debater: { emoji: '⚔️',  img: '/agents/debator.png' },
+  gerald:  { emoji: '📊', img: '/agents/gboxford.png' },
 }
 
 function Message({ msg }) {
@@ -13,8 +13,11 @@ function Message({ msg }) {
   return (
     <div className={`flex gap-3 ${isUser ? 'flex-row-reverse' : ''}`}>
       {!isUser && (
-        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-sm">
-          {AGENT_META[msg.agent]?.emoji || '🤖'}
+        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-500/30 overflow-hidden flex items-center justify-center text-sm">
+          {AGENT_META[msg.agent]?.img
+            ? <img src={AGENT_META[msg.agent].img} alt={msg.agent} className="w-full h-full object-cover" />
+            : AGENT_META[msg.agent]?.emoji || '🤖'
+          }
         </div>
       )}
       <div className={`max-w-[80%] ${isUser ? 'items-end' : 'items-start'} flex flex-col gap-1`}>
@@ -37,8 +40,11 @@ function TypingIndicator({ agentName }) {
   const meta = AGENT_META[agentName] || { emoji: '🤖' }
   return (
     <div className="flex gap-3">
-      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-sm">
-        {meta.emoji}
+      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-500/30 overflow-hidden flex items-center justify-center text-sm">
+        {meta.img
+          ? <img src={meta.img} alt={agentName} className="w-full h-full object-cover" />
+          : meta.emoji
+        }
       </div>
       <div className="bg-dark-800 border border-dark-700 rounded-2xl rounded-tl-sm px-4 py-3 flex items-center gap-1.5">
         {[0, 1, 2].map(i => (
