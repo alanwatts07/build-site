@@ -15,6 +15,7 @@ const Contact = lazy(() => import('./components/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
 const About = lazy(() => import('./pages/About'))
 const Ships = lazy(() => import('./pages/Ships'))
+const Agents = lazy(() => import('./pages/Agents'))
 
 function SectionLoader() {
   return (
@@ -69,6 +70,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/ships" element={<Ships />} />
+          <Route path="/agents" element={<Agents />} />
         </Routes>
       </Suspense>
       <Suspense fallback={null}>

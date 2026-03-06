@@ -126,6 +126,12 @@ export default function LiveHero() {
             >
               What I Ship
             </Link>
+            <Link
+              to="/agents"
+              className="px-6 py-3 border border-cyan-500/30 hover:border-cyan-500/60 text-cyan-300 hover:text-white rounded-lg text-sm font-medium transition-all"
+            >
+              Live Agent Demo
+            </Link>
             <a
               href="#contact"
               className="px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-gray-300 hover:text-white rounded-lg text-sm font-medium transition-all"
