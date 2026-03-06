@@ -47,6 +47,14 @@ async function start() {
     })
   } catch (err) {
     console.error('[Bridge] Failed to start:', err)
+    // If Discord is rate-limiting us, wait before exiting so Railway's
+    // auto-restart doesn't immediately hammer the API again.
+    const isRateLimit = err?.message?.includes('429')
+    if (isRateLimit) {
+      const waitMs = 5 * 60 * 1000 // 5 minutes
+      console.error(`[Bridge] Discord rate limit detected — waiting ${waitMs / 1000}s before exit to avoid crash loop`)
+      await new Promise(resolve => setTimeout(resolve, waitMs))
+    }
     process.exit(1)
   }
 }
