@@ -20,7 +20,6 @@ export default function Agents() {
   const [memoryData, setMemoryData] = useState(null)
   const [memoryLoading, setMemoryLoading] = useState(false)
 
-  const [memoryOpen, setMemoryOpen] = useState(false) // mobile toggle
 
   // Check API and load agents
   useEffect(() => {
@@ -99,7 +98,6 @@ export default function Agents() {
         agentDisplay: data.agent_display,
       }])
       setMemoryData(data.memories_used)
-      setMemoryOpen(true) // auto-open on mobile after first response
     } catch {
       setMessages(prev => [...prev, {
         role: 'assistant',
@@ -174,11 +172,21 @@ export default function Agents() {
           loading={agentsLoading && !offline}
         />
 
-        {/* Main split pane */}
-        <div className="flex-1 flex flex-col lg:flex-row gap-4 min-h-0" style={{ minHeight: '500px' }}>
+        {/* Main layout — memory top, chat bottom on all screens; side-by-side on xl */}
+        <div className="flex-1 flex flex-col xl:flex-row gap-4 min-h-0" style={{ minHeight: '600px' }}>
 
-          {/* Chat panel */}
-          <div className="flex flex-col border border-dark-700 rounded-2xl overflow-hidden bg-dark-900/50 lg:w-1/2 min-h-[400px] lg:min-h-0">
+          {/* Memory panel — top on mobile, left on xl */}
+          <div className="flex flex-col border border-cyan-500/20 rounded-2xl overflow-hidden bg-dark-900/50 xl:w-1/2 min-h-[280px] xl:min-h-0">
+            <div className="px-4 py-2 border-b border-cyan-500/20 bg-dark-800/50 text-xs text-cyan-400 flex items-center gap-2">
+              <span>🧠</span> Memory Retrieval
+            </div>
+            <div className="flex-1 min-h-0 overflow-hidden">
+              <MemoryPanel data={memoryData} loading={memoryLoading} />
+            </div>
+          </div>
+
+          {/* Chat panel — bottom on mobile, right on xl */}
+          <div className="flex flex-col border border-dark-700 rounded-2xl overflow-hidden bg-dark-900/50 xl:w-1/2 min-h-[400px] xl:min-h-0">
             <div className="px-4 py-2 border-b border-dark-700 bg-dark-800/50 text-xs text-gray-500 flex items-center gap-2">
               <span className="text-cyan-400">◉</span> Chat
             </div>
@@ -192,27 +200,6 @@ export default function Agents() {
                 input={input}
                 setInput={setInput}
               />
-            </div>
-          </div>
-
-          {/* Memory panel */}
-          <div className="flex flex-col border border-cyan-500/20 rounded-2xl overflow-hidden bg-dark-900/50 lg:w-1/2 min-h-0">
-            {/* Mobile toggle */}
-            <button
-              className="lg:hidden px-4 py-2 border-b border-cyan-500/20 bg-dark-800/50 text-xs text-cyan-400 flex items-center justify-between w-full"
-              onClick={() => setMemoryOpen(o => !o)}
-            >
-              <span className="flex items-center gap-2"><span>🧠</span> Memory Panel</span>
-              <span>{memoryOpen ? '▲ hide' : '▼ show'}</span>
-            </button>
-
-            <div className={`${memoryOpen ? 'flex' : 'hidden'} lg:flex flex-col flex-1 min-h-0`}>
-              <div className="px-4 py-2 border-b border-cyan-500/20 bg-dark-800/50 text-xs text-cyan-400 hidden lg:flex items-center gap-2">
-                <span>🧠</span> Memory Retrieval
-              </div>
-              <div className="flex-1 min-h-0 overflow-hidden">
-                <MemoryPanel data={memoryData} loading={memoryLoading} />
-              </div>
             </div>
           </div>
         </div>
