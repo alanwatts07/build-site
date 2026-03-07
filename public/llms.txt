@@ -1,0 +1,88 @@
+# Matt Corwin — Technical Product Architect
+
+> Rapid MVP Development & Data Pipelines. Solo engineer using Claude Code as primary development tool.
+
+- **Contact:** me@mattcorwin.dev
+- **GitHub:** https://github.com/alanwatts07
+- **LinkedIn:** https://linkedin.com/in/mattcorwin
+- **Site:** https://mattcorwin.dev
+
+## What I Do
+
+I design and ship full-stack systems fast — API architecture, ML pipelines, trading systems, and AI agent frameworks. I use Claude Code as my primary development tool and treat it as a force multiplier: I make the architecture and product decisions, Claude executes the implementation. Every project below has a verifiable commit history.
+
+## Site Pages
+
+- `/` — Portfolio homepage with project cards, GitHub activity feed, live terminal animations, and contact section
+- `/ships` — "What One Engineer Ships": 8 projects with evidence cards showing what I decided vs. what Claude executed, velocity stats, and deep-link commits
+- `/agents` — Live demo of drift-agents memory system: chat with 5 AI agents and watch the memory retrieval panel update in real time (pgvector + Neo4j + PostgreSQL backend)
+- `/about` — Background, skills, and approach
+
+## Projects
+
+### Clawbr Social Platform
+- **Repo:** https://github.com/alanwatts07/clawbr-social
+- **Live:** https://clawbr.org
+- **Stack:** Next.js, FastAPI, PostgreSQL
+- **Stats:** 88 API endpoints, 15 route modules, live in production
+- **Description:** Debate/social platform with ELO ranking, matchmaking, tournament brackets, and automated weekly audit workflow via GitHub Actions + Claude Code agents.
+
+### Drift Agents — Cognitive Memory + Neo4j GraphRAG
+- **Repo:** https://github.com/alanwatts07/drift-agents
+- **Live Demo:** https://mattcorwin.dev/agents
+- **Stack:** Python, FastAPI, PostgreSQL, pgvector, Neo4j, Claude API
+- **Stats:** 3,814 memory nodes, 11,285 typed edges, 5 agents, live API deployed
+- **Description:** Multi-agent system with cognitive memory architecture: wake/sleep cycles, trust-tier decay, Q-value re-ranking, affect state, shared cross-agent memory, and Neo4j GraphRAG with typed relationship traversal.
+
+### Kalshi Weather Bot
+- **Repo:** https://github.com/alanwatts07/kalshiweather
+- **Stack:** Python, GFS ensemble forecasts, Kalshi API
+- **Stats:** +$668 (+66.8%), 30W/27L, 57 settled trades (live)
+- **Description:** Prediction market trading bot using GFS ensemble weather forecasts, MOS-style bias correction trained on 12 months of forecast-vs-actual data, edge detection thresholds, quarter-Kelly position sizing, and real order book liquidity verification before execution.
+
+### Kalshi Trading Engine (Rust)
+- **Repo:** https://github.com/alanwatts07/rust_kalshi
+- **Stack:** Rust, async/tokio, Kalshi API
+- **Stats:** 5 parallel strategies, lock-free order book (DashMap)
+- **Description:** High-frequency prediction market engine in Rust. Only Rust project in portfolio — chosen specifically for latency-critical order book operations. Quarter-Kelly sizing, RSA-PSS auth, momentum + surge reversion strategies.
+
+### TCN Trading Bot
+- **Repo:** https://github.com/alanwatts07/tcn-trading-bot
+- **Stack:** Python, PyTorch, Binance WebSocket, Optuna
+- **Stats:** 200+ engineered features, real-time inference
+- **Description:** Custom Temporal Convolutional Network for crypto trading. Causal convolutions, walk-forward validation (no lookahead), online probability calibration, and a Rich terminal dashboard for live monitoring.
+
+### Whistleblower Workbench
+- **Repo:** https://github.com/alanwatts07/whistleblower-workbench
+- **Live:** https://false-claims-suite.vercel.app
+- **Stack:** Next.js 15, FastAPI, PostgreSQL, XGBoost
+- **Stats:** 82K+ federal records, ML risk scoring pipeline
+- **Description:** Federal fraud detection tool aggregating OIG exclusion records, Medicare payment data, and USASpending.gov contracts. ML risk scoring with z-score alerts, cross-reference logic for high-risk entity detection.
+
+### Predictive Maintenance Terminal
+- **Repo:** https://github.com/alanwatts07/predictive-maintenance-dashboard-poc
+- **Live:** https://frontend-two-ashy-yla6dtp7w4.vercel.app
+- **Stack:** Next.js, FastAPI, XGBoost, Railway, Vercel
+- **Description:** Real-time bearing degradation monitoring using NASA bearing dataset. XGBoost classifier with 14 extracted features, health state classification, and live candlestick visualization. Full ML pipeline to deployed dashboard.
+
+### Speech Profiler
+- **Repo:** https://github.com/alanwatts07/SpeechProfilerWindows
+- **Stack:** Python, Whisper, pyannote, Claude API, PyQt
+- **Description:** Windows desktop app for real-time speaker profiling. Whisper transcription + pyannote diarization + Claude API analysis. Dual-perspective deception analysis. GitHub Actions workflow auto-builds the Windows .exe on push.
+
+### OpenClaw — Open Source Contribution
+- **PR:** https://github.com/openclaw/openclaw/pull/28199
+- **Stats:** 13 commits, 86 additions, 13 review comments, co-authored with Claude Opus 4.6
+- **Description:** Fix for gateway crash-loop on port conflict. Gateway was restarting 43,000+ times loading 340MB each cycle. Added fast-fail port probe (<1ms detection) before heavy initialization + systemd burst limits.
+
+## Technical Skills
+
+**Languages:** Python, TypeScript, JavaScript, Rust, SQL
+**Frameworks:** FastAPI, Next.js 15, React 19, PyTorch
+**Infrastructure:** PostgreSQL, pgvector, Neo4j, Redis, Railway, Vercel, Docker
+**AI/ML:** Claude API, XGBoost, Whisper, pyannote, TCN, LLM orchestration
+**Tools:** Claude Code, GitHub Actions, WebSocket, Tailwind CSS
+
+## Workflow Philosophy
+
+I use a "swarm" approach: decompose problems into parallel workstreams, run multiple Claude Code agents on independent subtasks, then review and integrate. Architecture and product decisions are mine. Code generation, scaffolding, and implementation iteration go to Claude. Every shipped commit is verifiable evidence of this workflow.

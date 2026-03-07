@@ -25,6 +25,92 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>What One Engineer Ships | Matt Corwin</title>
+
+    <!-- Structured data for AI agents and search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "What One Engineer Ships — Matt Corwin",
+      "description": "8 projects shipped in under 2 months by a solo engineer using Claude Code. Every project has verifiable commit history.",
+      "url": "https://mattcorwin.dev/ships",
+      "author": {
+        "@type": "Person",
+        "name": "Matt Corwin",
+        "url": "https://mattcorwin.dev",
+        "sameAs": ["https://github.com/alanwatts07"]
+      },
+      "itemListElement": [
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 1,
+          "name": "Clawbr Social Platform",
+          "description": "88 API endpoints, 15 route modules, live in production. Debate/social platform with ELO ranking, matchmaking, and automated weekly audit workflow.",
+          "codeRepository": "https://github.com/alanwatts07/clawbr-social",
+          "url": "https://clawbr.org",
+          "programmingLanguage": ["TypeScript", "Python"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 2,
+          "name": "Drift Agents — Cognitive Memory + Neo4j GraphRAG",
+          "description": "Multi-agent system with 3,814 memory nodes, 11,285 typed edges, pgvector, Neo4j GraphRAG, Q-value re-ranking, affect system, and live demo API.",
+          "codeRepository": "https://github.com/alanwatts07/drift-agents",
+          "url": "https://mattcorwin.dev/agents",
+          "programmingLanguage": ["Python"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 3,
+          "name": "Kalshi Weather Bot",
+          "description": "Prediction market trading bot. GFS ensemble forecasts + MOS bias correction. Live results: +$668 (+66.8%), 30W/27L, 57 settled trades.",
+          "codeRepository": "https://github.com/alanwatts07/kalshiweather",
+          "programmingLanguage": ["Python"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 4,
+          "name": "Kalshi Trading Engine",
+          "description": "High-frequency prediction market engine in Rust. 5 parallel strategies, lock-free order book, quarter-Kelly sizing.",
+          "codeRepository": "https://github.com/alanwatts07/rust_kalshi",
+          "programmingLanguage": ["Rust"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 5,
+          "name": "TCN Trading Bot",
+          "description": "Custom PyTorch Temporal Convolutional Network for crypto trading. 200+ engineered features, walk-forward validation, real-time inference.",
+          "codeRepository": "https://github.com/alanwatts07/tcn-trading-bot",
+          "programmingLanguage": ["Python"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 6,
+          "name": "Whistleblower Workbench",
+          "description": "Federal fraud detection tool. 82K+ records from OIG, Medicare, USASpending.gov. ML risk scoring with z-score alerts.",
+          "codeRepository": "https://github.com/alanwatts07/whistleblower-workbench",
+          "url": "https://false-claims-suite.vercel.app",
+          "programmingLanguage": ["TypeScript", "Python"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 7,
+          "name": "Predictive Maintenance Terminal",
+          "description": "Real-time bearing degradation monitoring using NASA dataset. XGBoost classifier, FastAPI backend, Next.js dashboard, deployed on Railway + Vercel.",
+          "codeRepository": "https://github.com/alanwatts07/predictive-maintenance-dashboard-poc",
+          "programmingLanguage": ["Python", "TypeScript"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 8,
+          "name": "Speech Profiler",
+          "description": "Windows desktop app for real-time speaker profiling. Whisper + pyannote diarization + Claude API analysis. GitHub Actions auto-builds Windows exe.",
+          "codeRepository": "https://github.com/alanwatts07/SpeechProfilerWindows",
+          "programmingLanguage": ["Python"]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
