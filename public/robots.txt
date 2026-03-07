@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# AI agent / LLM index
+# Full site summary available at:
+Sitemap: https://mattcorwin.dev/llms.txt
