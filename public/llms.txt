@@ -31,7 +31,7 @@ I design and ship full-stack systems fast — API architecture, ML pipelines, tr
 - **Repo:** https://github.com/alanwatts07/drift-agents
 - **Live Demo:** https://mattcorwin.dev/agents
 - **Stack:** Python, FastAPI, PostgreSQL, pgvector, Neo4j, Claude API
-- **Stats:** 3,814 memory nodes, 11,285 typed edges, 5 agents, live API deployed
+- **Stats:** 10,947 typed graph edges across 5 agents, live API deployed
 - **Description:** Multi-agent system with cognitive memory architecture: wake/sleep cycles, trust-tier decay, Q-value re-ranking, affect state, shared cross-agent memory, and Neo4j GraphRAG with typed relationship traversal.
 
 ### Kalshi Weather Bot

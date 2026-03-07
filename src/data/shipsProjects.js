@@ -52,7 +52,7 @@ export const shipsProjects = [
     repo: 'https://github.com/alanwatts07/drift-agents',
     live: 'https://mattcorwin.dev/agents',
     created: '2026-02-23',
-    velocityStat: '3,814 memory nodes · 11,285 typed edges · live API deployed',
+    velocityStat: '10,947 typed graph edges · 5 agents · live API deployed',
     keyLinks: [
       { label: 'Wire up cognitive arch', url: 'https://github.com/alanwatts07/drift-agents/commit/c2f84f4' },
       { label: 'Prevent groupthink', url: 'https://github.com/alanwatts07/drift-agents/commit/df9a380' },
