@@ -21,13 +21,16 @@ export const shipsProjects = [
     repo: 'https://github.com/alanwatts07/clawbr-social',
     live: 'https://clawbr.org',
     created: '2026-02-06',
-    velocityStat: '80+ endpoints, zero → production',
+    velocityStat: '88 endpoints, zero → production',
     keyLinks: [
       { label: '#1 Fix JSON type mismatch', url: 'https://github.com/alanwatts07/clawbr-social/issues/1' },
       { label: '#5 Resolve stuck debates', url: 'https://github.com/alanwatts07/clawbr-social/issues/5' },
       { label: '#9 Vote grade inflation', url: 'https://github.com/alanwatts07/clawbr-social/issues/9' },
       { label: 'Fix auto-forfeit never running', url: 'https://github.com/alanwatts07/clawbr-social/commit/3c8120f' },
       { label: 'Batch audit fixes #11-#15', url: 'https://github.com/alanwatts07/clawbr-social/commit/be42b44' },
+      { label: 'Automated weekly audit workflow', url: 'https://github.com/alanwatts07/clawbr-social/commit/b9becd4' },
+      { label: 'Resolve audit issues #20-23', url: 'https://github.com/alanwatts07/clawbr-social/commit/80930b7' },
+      { label: 'Token ledger reconciliation script', url: 'https://github.com/alanwatts07/clawbr-social/commit/90770cd' },
     ],
     iDid: [
       'Designed 80+ endpoint REST API from scratch',
@@ -45,27 +48,28 @@ export const shipsProjects = [
   {
     id: 'drift-agents',
     title: 'Drift Agents — Cognitive Memory + Neo4j',
-    oneLiner: 'pgvector, typed edges, Q-value re-ranking, affect system, Neo4j GraphRAG',
+    oneLiner: 'pgvector, typed edges, Q-value re-ranking, affect system, Neo4j GraphRAG — live demo API deployed',
     repo: 'https://github.com/alanwatts07/drift-agents',
+    live: 'https://mattcorwin.dev/agents',
     created: '2026-02-23',
-    velocityStat: '2,320 nodes · 6,528 edges · 5 agents',
+    velocityStat: '3,814 memory nodes · 11,285 typed edges · live API deployed',
     keyLinks: [
       { label: 'Wire up cognitive arch', url: 'https://github.com/alanwatts07/drift-agents/commit/c2f84f4' },
       { label: 'Prevent groupthink', url: 'https://github.com/alanwatts07/drift-agents/commit/df9a380' },
       { label: 'Neo4j Phase 0 sync', url: 'https://github.com/alanwatts07/drift-agents/commit/52ac68d' },
-      { label: 'GraphRAG roadmap', url: 'https://github.com/alanwatts07/drift-agents/commit/d15a97a' },
+      { label: 'Neo4j Phase 1-3 + backfill 11,285 edges', url: 'https://github.com/alanwatts07/drift-agents/commit/0a06aae' },
     ],
     iDid: [
       'Designed cognitive memory architecture (wake/sleep cycles)',
       'Trust-tier system with natural memory decay',
-      'Neo4j GraphRAG migration strategy',
+      'Neo4j dual-write migration strategy (Phase 0→3)',
       'Shared memory cross-agent knowledge protocol',
     ],
     claudeDid: [
       'Generated 42KB memory_wrapper.py lifecycle',
       'Built Postgres schema (typed_edges, pgvector, q_value_history)',
       'Implemented HNSW embedding search',
-      'Scaffolded Neo4j sync pipeline',
+      'Backfill pipeline: 11,285 typed edges migrated to Neo4j',
     ],
   },
   {
@@ -194,6 +198,7 @@ export const shipsProjects = [
     velocityStat: 'Multi-model pipeline · real-time processing',
     keyLinks: [
       { label: 'Dual-perspective deception analysis', url: 'https://github.com/alanwatts07/SpeechProfilerWindows/commit/e80a556' },
+      { label: 'GitHub Actions auto-build Windows exe', url: 'https://github.com/alanwatts07/SpeechProfilerWindows/commit/ecf51b2' },
     ],
     iDid: [
       'Designed multi-model audio pipeline architecture',
