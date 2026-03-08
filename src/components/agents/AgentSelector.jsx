@@ -1,10 +1,35 @@
-const AGENT_META = {
-  max:     { emoji: '🚀', vibe: 'Tech, crypto, dry humor',    img: '/agents/max.png' },
-  beth:    { emoji: '🌿', vibe: 'Ethics, philosophy, warm',   img: '/agents/bethanyfinkel.png' },
-  susan:   { emoji: '🎯', vibe: 'Quality judge, precise',     img: '/agents/susan.png' },
-  debater: { emoji: '⚔️',  vibe: 'Debate machine, aggressive', img: '/agents/debator.png' },
-  gerald:  { emoji: '📊', vibe: 'Data scientist, analytical', img: '/agents/gboxford.png' },
+// Known overrides — any agent NOT listed here gets auto-derived from API data
+const AGENT_OVERRIDES = {
+  max:     { emoji: '🚀', img: '/agents/max.png' },
+  beth:    { emoji: '🌿', img: '/agents/bethanyfinkel.png' },
+  susan:   { emoji: '🎯', img: '/agents/susan.png' },
+  debater: { emoji: '⚔️',  img: '/agents/debator.png' },
+  gerald:  { emoji: '📊', img: '/agents/gboxford.png' },
 }
+
+function AgentAvatar({ name, displayName, small = false }) {
+  const override = AGENT_OVERRIDES[name]
+  const imgSrc = override?.img || `/agents/${name}.png`
+  const emoji = override?.emoji || '🤖'
+  const cls = small ? 'w-6 h-6' : 'w-8 h-8'
+
+  return (
+    <div className={`flex-shrink-0 ${cls} rounded-full bg-cyan-500/20 border border-cyan-500/30 overflow-hidden flex items-center justify-center text-sm`}>
+      <img
+        src={imgSrc}
+        alt={displayName}
+        className="w-full h-full object-cover"
+        onError={e => {
+          e.target.style.display = 'none'
+          e.target.parentNode.dataset.emoji = emoji
+          e.target.parentNode.textContent = emoji
+        }}
+      />
+    </div>
+  )
+}
+
+export { AgentAvatar }
 
 export default function AgentSelector({ agents, selected, onSelect, loading }) {
   if (loading) {
@@ -20,7 +45,6 @@ export default function AgentSelector({ agents, selected, onSelect, loading }) {
   return (
     <div className="flex gap-2 flex-wrap">
       {agents.map(agent => {
-        const meta = AGENT_META[agent.name] || { emoji: '🤖', vibe: agent.specialty }
         const isSelected = selected === agent.name
         return (
           <button
@@ -33,10 +57,7 @@ export default function AgentSelector({ agents, selected, onSelect, loading }) {
             }`}
           >
             <div className="flex items-center gap-2 mb-1">
-              {meta.img
-                ? <img src={meta.img} alt={agent.display_name} className="w-6 h-6 rounded-full object-cover" />
-                : <span className="text-lg">{meta.emoji}</span>
-              }
+              <AgentAvatar name={agent.name} displayName={agent.display_name} small />
               <span className="font-semibold text-sm">{agent.display_name}</span>
               <span className={`text-xs px-1.5 py-0.5 rounded-full font-mono ${
                 isSelected ? 'bg-cyan-500/20 text-cyan-300' : 'bg-dark-700 text-gray-500'
@@ -44,7 +65,7 @@ export default function AgentSelector({ agents, selected, onSelect, loading }) {
                 {agent.stats.total_memories}
               </span>
             </div>
-            <span className="text-xs text-gray-500 leading-tight">{meta.vibe}</span>
+            <span className="text-xs text-gray-500 leading-tight">{agent.specialty}</span>
           </button>
         )
       })}
