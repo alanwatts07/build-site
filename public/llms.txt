@@ -37,7 +37,7 @@ I design and ship full-stack systems fast — API architecture, ML pipelines, tr
 ### Kalshi Weather Bot
 - **Repo:** https://github.com/alanwatts07/kalshiweather
 - **Stack:** Python, GFS ensemble forecasts, Kalshi API
-- **Stats:** +$668 (+66.8%), 30W/27L, 57 settled trades (live)
+- **Stats:** +$1,591 (+159%), 76W/74L, 150 settled trades, $2,591 equity on $1,000 starting (8 days, fully automated via cron)
 - **Description:** Prediction market trading bot using GFS ensemble weather forecasts, MOS-style bias correction trained on 12 months of forecast-vs-actual data, edge detection thresholds, quarter-Kelly position sizing, and real order book liquidity verification before execution.
 
 ### Kalshi Trading Engine (Rust)

@@ -144,10 +144,10 @@ export const projects = [
     id: 'kalshi-weather',
     title: 'Kalshi Weather Bot',
     category: 'Quantitative Finance',
-    description: 'Automated trading CLI for Kalshi temperature prediction markets. Uses GFS 31-member ensemble forecasts with MOS-style bias correction to detect pricing edges, then sizes positions with quarter-Kelly and verifies order book liquidity before execution. +$668 (+66.8%) in 4 days of paper trading — every trade logged with entry price, settlement, and P&L.',
+    description: 'Automated trading CLI for Kalshi temperature prediction markets. Uses GFS 31-member ensemble forecasts with MOS-style bias correction to detect pricing edges, then sizes positions with quarter-Kelly and verifies order book liquidity before execution. +$1,591 (+159%) in 8 days of paper trading — 150 settled trades, fully automated via cron.',
     technologies: ['Python', 'GFS Ensemble', 'MOS Bias Correction', 'Kelly Criterion', 'Kalshi API'],
     highlights: [
-      '+$668 (+66.8%) in 4 days — 30 wins / 27 losses across 6 cities',
+      '+$1,591 (+159%) in 8 days — 76W/74L, 150 settled trades, $2,591 equity on $1,000 starting',
       'MOS-style bias correction trained on 12 months of forecast-vs-actual data',
       'Quarter-Kelly position sizing with real order book liquidity verification'
     ],
