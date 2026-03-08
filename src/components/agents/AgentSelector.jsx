@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 // Known overrides — any agent NOT listed here gets auto-derived from API data
 const AGENT_OVERRIDES = {
   max:     { emoji: '🚀', img: '/agents/max.png' },
@@ -8,6 +10,7 @@ const AGENT_OVERRIDES = {
 }
 
 function AgentAvatar({ name, displayName, small = false }) {
+  const [imgFailed, setImgFailed] = useState(false)
   const override = AGENT_OVERRIDES[name]
   const imgSrc = override?.img || `/agents/${name}.png`
   const emoji = override?.emoji || '🤖'
@@ -15,16 +18,10 @@ function AgentAvatar({ name, displayName, small = false }) {
 
   return (
     <div className={`flex-shrink-0 ${cls} rounded-full bg-cyan-500/20 border border-cyan-500/30 overflow-hidden flex items-center justify-center text-sm`}>
-      <img
-        src={imgSrc}
-        alt={displayName}
-        className="w-full h-full object-cover"
-        onError={e => {
-          e.target.style.display = 'none'
-          e.target.parentNode.dataset.emoji = emoji
-          e.target.parentNode.textContent = emoji
-        }}
-      />
+      {imgFailed
+        ? emoji
+        : <img src={imgSrc} alt={displayName} className="w-full h-full object-cover" onError={() => setImgFailed(true)} />
+      }
     </div>
   )
 }
