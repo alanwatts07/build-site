@@ -190,6 +190,30 @@ export const shipsProjects = [
     ],
   },
   {
+    id: 'drift-radio',
+    title: 'Drift Radio',
+    oneLiner: 'Live AI radio station — Claude writes the scripts, OpenAI voices them, Liquidsoap never cuts a song',
+    repo: 'https://github.com/alanwatts07/drift-radio',
+    created: '2026-03-07',
+    velocityStat: 'Zero to live broadcast in 1 day',
+    keyLinks: [
+      { label: 'Initial commit — full architecture', url: 'https://github.com/alanwatts07/drift-radio/commit/a1a5c8e' },
+      { label: 'Fix TTS stereo + smart queue timing', url: 'https://github.com/alanwatts07/drift-radio/commit/740c590' },
+    ],
+    iDid: [
+      'Designed priority chain: AI segments > Spotify passthrough > local playlist',
+      'Smart timing architecture: poll remaining playback, queue at ≤15s — no mid-song cuts',
+      'Segment schedule: track facts, :30 news breaks, top-of-hour agent commentary',
+      'Wired drift agents API into broadcast pipeline for live personality takes',
+    ],
+    claudeDid: [
+      'Generated Liquidsoap config with fallback chain and request queue',
+      'Built spotify_watcher.py track change detection via spotipy',
+      'Implemented tts_renderer.py with ffmpeg loudnorm to -14 LUFS broadcast standard',
+      'Scaffolded Docker Compose for Icecast + Liquidsoap containers',
+    ],
+  },
+  {
     id: 'speech-profiler',
     title: 'Speech Profiler',
     oneLiner: 'Whisper + pyannote + Claude API for real-time speaker profiling',

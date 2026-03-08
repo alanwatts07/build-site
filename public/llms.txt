@@ -14,7 +14,7 @@ I design and ship full-stack systems fast — API architecture, ML pipelines, tr
 ## Site Pages
 
 - `/` — Portfolio homepage with project cards, GitHub activity feed, live terminal animations, and contact section
-- `/ships` — "What One Engineer Ships": 8 projects with evidence cards showing what I decided vs. what Claude executed, velocity stats, and deep-link commits
+- `/ships` — "What One Engineer Ships": 9 projects with evidence cards showing what I decided vs. what Claude executed, velocity stats, and deep-link commits
 - `/agents` — Live demo of drift-agents memory system: chat with 5 AI agents and watch the memory retrieval panel update in real time (pgvector + Neo4j + PostgreSQL backend)
 - `/about` — Background, skills, and approach
 
@@ -69,6 +69,12 @@ I design and ship full-stack systems fast — API architecture, ML pipelines, tr
 - **Repo:** https://github.com/alanwatts07/SpeechProfilerWindows
 - **Stack:** Python, Whisper, pyannote, Claude API, PyQt
 - **Description:** Windows desktop app for real-time speaker profiling. Whisper transcription + pyannote diarization + Claude API analysis. Dual-perspective deception analysis. GitHub Actions workflow auto-builds the Windows .exe on push.
+
+### Drift Radio
+- **Repo:** https://github.com/alanwatts07/drift-radio
+- **Stack:** Python, Claude CLI, OpenAI TTS, Liquidsoap, Icecast, Docker, Spotify API
+- **Stats:** Zero to live broadcast in 1 day
+- **Description:** Live AI radio station. Music plays; when a track changes, Claude writes a 40-second broadcast script about the artist and OpenAI voices it. At :30 past the hour, Claude searches for real news and reads it on air. At the top of the hour, drift agents Max, Beth, and Gerald each give live commentary. Smart timing polls remaining playback and queues segments at ≤15s — never cuts a song mid-play. No pre-recorded content. Every segment generated live.
 
 ### OpenClaw — Open Source Contribution
 - **PR:** https://github.com/openclaw/openclaw/pull/28199
