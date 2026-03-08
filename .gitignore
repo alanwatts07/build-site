@@ -20,7 +20,8 @@ discord-chat-bridge/.env
 # OS files
 .DS_Store
 Thumbs.db
-
+plan.md
 # Logs
 *.log
 npm-debug.log*
+executive-narrative.md

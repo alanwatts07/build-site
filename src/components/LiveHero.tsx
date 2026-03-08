@@ -96,7 +96,7 @@ export default function LiveHero() {
         {/* Hero content */}
         <div className="text-center mb-12">
           <div className="inline-block px-4 py-1 mb-4 border border-indigo-500/30 rounded-full">
-            <span className="text-xs text-indigo-400 tracking-widest">TECHNICAL PRODUCT ARCHITECT</span>
+            <span className="text-xs text-indigo-400 tracking-widest">AI SOLUTIONS ARCHITECT</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight">
@@ -104,7 +104,7 @@ export default function LiveHero() {
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Rapid MVP Development & Data Pipelines
+            AI Systems Design & Rapid Deployment
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

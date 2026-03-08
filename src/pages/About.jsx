@@ -221,7 +221,7 @@ export default function About() {
 
           <p className="text-xl text-gray-400 leading-relaxed max-w-3xl">
             <TypeWriter
-              text="Technical Product Architect who turns ideas into working MVPs fast. Years of coding fundamentals combined with AI-augmented development means I prototype in days what traditionally takes weeks—then communicate effectively with senior engineers to harden and scale."
+              text="AI Solutions Architect who designs and ships production systems — from memory architectures to trading engines to federal data pipelines. AI-augmented development means I move from concept to deployed system in days, with every architectural decision and tradeoff owned end-to-end."
               speed={15}
             />
           </p>

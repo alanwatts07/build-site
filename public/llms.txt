@@ -1,6 +1,6 @@
-# Matt Corwin — Technical Product Architect
+# Matt Corwin — AI Solutions Architect
 
-> Rapid MVP Development & Data Pipelines. Solo engineer using Claude Code as primary development tool.
+> Designs and deploys AI systems — memory architectures, trading engines, federal data pipelines. 8 production systems shipped in under 2 months.
 
 - **Contact:** me@mattcorwin.dev
 - **GitHub:** https://github.com/alanwatts07
