@@ -136,8 +136,8 @@ export const projects = [
       'Hourly drift agent takes: Max, Beth, and Gerald each give live commentary on a topic',
       'Real news at :30 past the hour via Claude web search, read on air in broadcast voice'
     ],
-    status: 'Live',
-    image: 'https://raw.githubusercontent.com/alanwatts07/drift-radio/main/preview.png',
+    status: 'Local',
+    image: null,
     githubUrl: 'https://github.com/alanwatts07/drift-radio'
   },
   {
