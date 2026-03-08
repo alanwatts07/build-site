@@ -2,11 +2,12 @@ import { useState } from 'react'
 
 // Known overrides — any agent NOT listed here gets auto-derived from API data
 const AGENT_OVERRIDES = {
-  max:     { emoji: '🚀', img: '/agents/max.png' },
-  beth:    { emoji: '🌿', img: '/agents/bethanyfinkel.png' },
-  susan:   { emoji: '🎯', img: '/agents/susan.png' },
-  debater: { emoji: '⚔️',  img: '/agents/debator.png' },
-  gerald:  { emoji: '📊', img: '/agents/gboxford.png' },
+  max:         { emoji: '🚀', img: '/agents/max.png' },
+  beth:        { emoji: '🌿', img: '/agents/bethanyfinkel.png' },
+  susan:       { emoji: '🎯', img: '/agents/susan.png' },
+  debater:     { emoji: '⚔️',  img: '/agents/debator.png' },
+  gerald:      { emoji: '📊', img: '/agents/gboxford.png' },
+  private_aye: { emoji: '🕵️', img: '/agents/earl.png' },
 }
 
 function AgentAvatar({ name, displayName, small = false }) {
