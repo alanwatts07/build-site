@@ -126,21 +126,6 @@ export const projects = [
     githubUrl: 'https://github.com/alanwatts07/rust_kalshi'
   },
   {
-    id: 'drift-radio',
-    title: 'Drift Radio',
-    category: 'AI Media',
-    description: 'A live AI radio station that generates broadcast content between songs — artist facts, real news breaks, and drift agent commentary — using Claude CLI, OpenAI TTS, and Liquidsoap. No pre-recorded content. Every segment written and voiced live.',
-    technologies: ['Python', 'Claude CLI', 'OpenAI TTS', 'Liquidsoap', 'Icecast', 'Docker', 'Spotify API'],
-    highlights: [
-      'Smart timing: segment generation starts on track change, queues at ≤15s remaining — never cuts a song',
-      'Hourly drift agent takes: Max, Beth, and Gerald each give live commentary on a topic',
-      'Real news at :30 past the hour via Claude web search, read on air in broadcast voice'
-    ],
-    status: 'Local',
-    image: null,
-    githubUrl: 'https://github.com/alanwatts07/drift-radio'
-  },
-  {
     id: 'kalshi-weather',
     title: 'Kalshi Weather Bot',
     category: 'Quantitative Finance',
