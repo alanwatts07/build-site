@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const skills = {
-  'Core': ['AI-Augmented Development', 'Rapid Prototyping', 'Full-Stack Architecture'],
-  'Languages': ['Python', 'TypeScript', 'JavaScript', 'SQL'],
-  'Frontend': ['React', 'Next.js', 'Tailwind CSS'],
-  'AI/ML': ['LLM Integration', 'Claude API', 'OpenAI', 'NLP', 'Deep Learning', 'Predictive Modeling'],
-  'Systems': ['REST APIs', 'Data Pipelines', 'Real-time Dashboards', 'Database Design'],
-  'Tools': ['Git', 'Linux', 'Windows'],
+  'Languages': ['Python', 'TypeScript', 'JavaScript', 'Rust', 'SQL'],
+  'Frameworks': ['FastAPI', 'Next.js 15', 'React 19', 'PyTorch'],
+  'AI/ML': ['Claude API', 'LLM Orchestration', 'Multi-Agent Systems', 'MCP', 'RAG', 'GraphRAG', 'XGBoost', 'Whisper', 'TCN', 'Agentic Architectures', 'Prompt Design', 'Performance Optimization'],
+  'Databases': ['PostgreSQL', 'pgvector', 'Neo4j', 'Redis'],
+  'Infrastructure': ['Docker', 'Railway', 'Vercel', 'GitHub Actions', 'Icecast', 'Liquidsoap', 'Cloud-native Deployment', 'API Integration'],
+  'Tools': ['Claude Code', 'WebSocket', 'Optuna', 'pyannote', 'Tailwind CSS', 'Git'],
 }
 
 const experience = [
@@ -15,42 +15,22 @@ const experience = [
     title: 'CTO / CIO',
     company: 'New Energy Initiative',
     period: '2017 – Present',
-    description: 'Leading technology strategy for green energy company pivoting into tech product marketplace.',
+    description: 'Lead technology strategy, defining agentic architectures and roadmap to transition the green-energy firm into a tech-product marketplace.',
     highlights: [
-      'Built company website, CRM integrations (GoHighLevel), and custom automation workflows',
-      'Design and implement data pipelines connecting forms, CRM, and internal systems',
-      'Conduct requirements discovery sessions with staff to identify pain points and build solutions',
-      'Onboard and train new employees on technical workflows and systems',
+      'Lead technology strategy, defining agentic architectures and roadmap with GraphRAG and PyTorch, enabling the launch of new digital services',
+      'Built the company website and integrated GoHighLevel CRM via API with WebSocket and GitHub Actions — cut manual data-entry time by half',
+      'Design and implement data pipelines with GraphRAG and MCP, syncing form submissions to CRM and internal systems with real-time analytics',
     ],
   },
   {
-    title: 'Independent Technical Prototyper',
-    company: 'Self-Employed',
+    title: 'Independent AI Systems Builder',
+    company: 'Independent',
     period: '2023 – Present',
-    description: 'Building functional MVPs in days—validating concepts before committing engineering resources.',
+    description: 'Ship production AI systems end-to-end — architecture, implementation, and cloud-native deployment.',
     highlights: [
-      'Architect full-stack AI/ML solutions, then hand off to senior developers for production',
-      'Bridge the gap between "idea" and "working demo" for industrial, financial, and analytical domains',
-      'Specialize in rapid iteration and proof-of-concept development',
-    ],
-  },
-  {
-    title: 'Store Supervisor',
-    company: 'Energy North Group',
-    period: '2013 – 2019',
-    description: 'Managed daily operations, scheduling, and profitability analysis.',
-    highlights: [
-      'Led hiring process and team coordination across multiple shifts',
-      'Developed systems for inventory tracking and operational efficiency',
-    ],
-  },
-  {
-    title: 'Assistant, CS Graduate Admissions',
-    company: 'George Washington University',
-    period: '2012 – 2013',
-    description: 'Processed applicant data with high accuracy and attention to detail.',
-    highlights: [
-      'Managed sensitive information requiring thorough verification protocols',
+      'Delivered nine production projects in trading, social platforms, federal data pipelines, and multi-agent systems using MCP and GraphRAG',
+      'Apply swarm methodology: break work into parallel streams, run multiple AI agents on independent subtasks with Optuna optimization, then integrate outputs',
+      'Ship full systems end-to-end with Docker and WebSocket, deploying reliable and scalable solutions with cloud-native practices',
     ],
   },
 ]
@@ -216,12 +196,12 @@ export default function About() {
           </h1>
 
           <div className="inline-block px-4 py-1 mb-6 border border-indigo-500/30 rounded-full">
-            <span className="text-sm text-indigo-400 tracking-wider">TECHNICAL PRODUCT ARCHITECT</span>
+            <span className="text-sm text-indigo-400 tracking-wider">AGENTIC AI ENGINEER</span>
           </div>
 
           <p className="text-xl text-gray-400 leading-relaxed max-w-3xl">
             <TypeWriter
-              text="AI Solutions Architect who designs and ships production systems — from memory architectures to trading engines to federal data pipelines. AI-augmented development means I move from concept to deployed system in days, with every architectural decision and tradeoff owned end-to-end."
+              text="Agentic AI Engineer with senior-level experience designing and deploying production-grade LLM-driven systems — multi-agent orchestration, memory architectures, and retrieval-augmented pipelines. Nine end-to-end AI projects shipped, from automated trading engines to multi-agent data platforms."
               speed={15}
             />
           </p>
@@ -296,6 +276,7 @@ export default function About() {
             <h3 className="text-xl font-semibold text-white mb-1">George Washington University</h3>
             <p className="text-gray-400 mb-2">Washington, DC</p>
             <p className="text-indigo-400 font-mono text-sm">Sociology Studies • 2012 – 2015</p>
+            <p className="text-gray-500 text-sm mt-2">GPA: 3.9 · Honors Program</p>
           </div>
         </section>
 
@@ -308,8 +289,8 @@ export default function About() {
           <ul className="space-y-3">
             {[
               'Self-directed learner with 10+ years of hands-on technical exploration',
-              'Strong communicator with experience presenting to groups (debate, theater)',
-              'Background in team leadership across multiple industries',
+              'Implement robust evaluation and observability loops to ensure reliability and drive continuous improvement',
+              'Apply swarm methodology — parallel agent workstreams with Optuna optimization — to shorten development cycles',
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-gray-400">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-500" />
