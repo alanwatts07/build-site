@@ -12,25 +12,25 @@ const skills = {
 
 const experience = [
   {
-    title: 'CTO / CIO',
-    company: 'New Energy Initiative',
-    period: '2017 – Present',
-    description: 'Lead technology strategy, defining agentic architectures and roadmap to transition the green-energy firm into a tech-product marketplace.',
-    highlights: [
-      'Lead technology strategy, defining agentic architectures and roadmap with GraphRAG and PyTorch, enabling the launch of new digital services',
-      'Built the company website and integrated GoHighLevel CRM via API with WebSocket and GitHub Actions — cut manual data-entry time by half',
-      'Design and implement data pipelines with GraphRAG and MCP, syncing form submissions to CRM and internal systems with real-time analytics',
-    ],
-  },
-  {
-    title: 'Independent AI Systems Builder',
+    title: 'Freelance AI Engineer',
     company: 'Independent',
-    period: '2023 – Present',
+    period: '2025 – Present',
     description: 'Ship production AI systems end-to-end — architecture, implementation, and cloud-native deployment.',
     highlights: [
       'Delivered nine production projects in trading, social platforms, federal data pipelines, and multi-agent systems using MCP and GraphRAG',
       'Apply swarm methodology: break work into parallel streams, run multiple AI agents on independent subtasks with Optuna optimization, then integrate outputs',
       'Ship full systems end-to-end with Docker and WebSocket, deploying reliable and scalable solutions with cloud-native practices',
+    ],
+  },
+  {
+    title: 'CTO / CIO',
+    company: 'New Energy Initiative',
+    period: '2017 – 2025',
+    description: 'Led technology strategy for green energy company pivoting into tech product marketplace.',
+    highlights: [
+      'Defined agentic architectures and roadmap with GraphRAG and PyTorch, enabling launch of new digital services',
+      'Built company website and integrated GoHighLevel CRM via API with WebSocket and GitHub Actions — cut manual data-entry time by half',
+      'Designed and implemented data pipelines with GraphRAG and MCP, enabling real-time analytics across form submissions and internal systems',
     ],
   },
 ]
