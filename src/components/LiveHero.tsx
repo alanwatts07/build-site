@@ -133,6 +133,14 @@ export default function LiveHero() {
               Live Agent Demo
             </Link>
             <a
+              href="https://radio.mattcorwin.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-amber-500/30 hover:border-amber-500/60 text-amber-300 hover:text-white rounded-lg text-sm font-medium transition-all"
+            >
+              Radio Jukebox
+            </a>
+            <a
               href="#contact"
               className="px-6 py-3 border border-indigo-500/30 hover:border-indigo-500/60 text-gray-300 hover:text-white rounded-lg text-sm font-medium transition-all"
             >
