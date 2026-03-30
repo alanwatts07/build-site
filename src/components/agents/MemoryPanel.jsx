@@ -228,12 +228,9 @@ export default function MemoryPanel({ data, loading }) {
       )}
 
       {/* Graph Context */}
-      {graph_context && (graph_context.community_summaries?.length > 0 || graph_context.expanded_count > 0) && (
+      {graph_context && (graph_context.community_summaries?.length > 0 || graph_context.expanded?.length > 0 || graph_context.expanded_count > 0) && (
         <Section title="Graph Context" icon="🕸️" accent="indigo" defaultOpen={false}>
           <div className="px-1 space-y-2">
-            {graph_context.expanded_count > 0 && (
-              <p className="text-xs text-gray-500">{graph_context.expanded_count} memories expanded via graph edges</p>
-            )}
             {graph_context.community_summaries?.map(c => (
               <div key={c.community_id} className="rounded-lg border border-dark-700 bg-dark-950/50 p-3">
                 <div className="flex items-center justify-between mb-1">
@@ -243,6 +240,32 @@ export default function MemoryPanel({ data, loading }) {
                 <p className="text-xs text-gray-400 leading-relaxed line-clamp-2">{c.summary}</p>
               </div>
             ))}
+            {graph_context.expanded?.length > 0 && (
+              <>
+                <p className="text-xs text-gray-500 font-medium mt-1">Graph Edges ({graph_context.expanded.length})</p>
+                {graph_context.expanded.map(m => (
+                  <div key={m.id} className="rounded-lg border border-dark-700 bg-dark-950/50 p-2">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-400 font-mono">{m.rel_type}</span>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed line-clamp-2">{m.content}</p>
+                  </div>
+                ))}
+              </>
+            )}
+            {graph_context.community_members?.length > 0 && (
+              <>
+                <p className="text-xs text-gray-500 font-medium mt-1">Cluster Members ({graph_context.community_members.length})</p>
+                {graph_context.community_members.map(m => (
+                  <div key={m.id} className="rounded-lg border border-dark-700 bg-dark-950/50 p-2">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400 font-mono">{m.community_title}</span>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed line-clamp-2">{m.content}</p>
+                  </div>
+                ))}
+              </>
+            )}
           </div>
         </Section>
       )}
