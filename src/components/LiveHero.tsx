@@ -133,6 +133,14 @@ export default function LiveHero() {
               Live Agent Demo
             </Link>
             <a
+              href="https://book.mattcorwin.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 border border-purple-500/30 hover:border-purple-500/60 text-purple-300 hover:text-white rounded-lg text-sm font-medium transition-all"
+            >
+              My Book
+            </a>
+            <a
               href="https://radio.mattcorwin.dev"
               target="_blank"
               rel="noopener noreferrer"
