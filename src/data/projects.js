@@ -11,7 +11,7 @@ export const projects = [
       'End-to-end brand presence: design, development, and launch'
     ],
     status: 'Live',
-    image: 'https://raw.githubusercontent.com/0CyberVoid0/void-technology/main/preview.png',
+    image: 'https://raw.githubusercontent.com/0CyberVoid0/void-technology/main/preview.png.png',
     githubUrl: 'https://github.com/0CyberVoid0/void-technology',
     demoUrl: 'https://voidtechnology.net'
   },
