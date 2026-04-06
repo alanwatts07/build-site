@@ -57,7 +57,8 @@ export const projects = [
     highlights: [
       '129k+ graph edges, 6,928 memories, 2,580 Leiden communities across 6 agents',
       'Cognitive modules: Q-value learning, affect system, goal generation, self-narrative, KG extraction',
-      'Hybrid models: Claude Sonnet + local Qwen2.5-Coder 32B — runs on a desktop RTX 4060 Ti'
+      'Hybrid models: Claude Sonnet + local Qwen2.5-Coder 32B — runs on a desktop RTX 4060 Ti',
+      'Runs entirely on Claude Max subscription — no API credits needed, viable OpenClaw replacement'
     ],
     status: 'Live',
     image: 'https://raw.githubusercontent.com/alanwatts07/drift-agents/master/preview.png',
