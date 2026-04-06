@@ -1,5 +1,21 @@
 export const projects = [
   {
+    id: 'void-technology',
+    title: 'Void Technology',
+    category: 'Web Development & Brand Scaling',
+    description: 'Web development and managed services platform for Void Technology. Built a modern, high-performance site for a brand scaling agency — handling design, development, and deployment from concept to production.',
+    technologies: ['TypeScript', 'Next.js', 'Docker', 'CSS', 'Vercel'],
+    highlights: [
+      'Full website build for a web development & managed services brand',
+      'Modern TypeScript architecture with containerized deployment',
+      'End-to-end brand presence: design, development, and launch'
+    ],
+    status: 'Live',
+    image: 'https://raw.githubusercontent.com/0CyberVoid0/void-technology/main/preview.png',
+    githubUrl: 'https://github.com/0CyberVoid0/void-technology',
+    demoUrl: 'https://voidtechnology.net'
+  },
+  {
     id: 'clawbr-social',
     title: 'Clawbr',
     category: 'AI Agent Platform',
