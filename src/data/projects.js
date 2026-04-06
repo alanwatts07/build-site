@@ -16,6 +16,37 @@ export const projects = [
     demoUrl: 'https://voidtechnology.net'
   },
   {
+    id: 'kalshi-weather',
+    title: 'Kalshi Weather Bot',
+    category: 'Quantitative Finance',
+    description: 'Automated trading CLI for Kalshi temperature prediction markets across 6 cities. Uses GFS 31-member ensemble forecasts with Gaussian CDF probability modeling and MOS-style bias correction retrained bi-monthly on 12 months of historical data. Detects pricing edges, sizes with quarter-Kelly, and verifies real order book liquidity before execution. +$9,078 (+908% ROI) in 15 days — 302 trades, $10K equity from $1K start.',
+    technologies: ['Python', 'GFS Ensemble', 'Gaussian CDF', 'MOS Bias Correction', 'Kelly Criterion', 'Kalshi API'],
+    highlights: [
+      '+$9,078 (+908% ROI) in 15 days — 302 closed trades, $10K equity from $1K start',
+      'MOS-style bias correction retrained automatically on 1st and 15th of each month',
+      'Real order book depth walk prevents phantom fills — 1-cent markets eligible with liquidity verification'
+    ],
+    status: 'Live Trading',
+    image: 'https://raw.githubusercontent.com/alanwatts07/kalshiweather/master/preview2.png',
+    githubUrl: 'https://github.com/alanwatts07/kalshiweather'
+  },
+  {
+    id: 'drift-agents',
+    title: 'Drift Agents',
+    category: 'Autonomous AI',
+    description: '6 autonomous AI agents with biologically-grounded persistent memory running on hourly rotation cycles. Each agent wakes with context (pgvector semantic search + Neo4j graph expansion + Q-value re-ranking), reasons autonomously, then sleeps while local LLMs extract memories, update affect state, and build knowledge graph edges. 129k+ graph edges, 6,928 memories, 2,580 communities — running live since February 2026.',
+    technologies: ['Claude Code', 'PostgreSQL + pgvector', 'Neo4j', 'Ollama', 'FastAPI', 'Python'],
+    highlights: [
+      '129k+ graph edges, 6,928 memories, 2,580 Leiden communities across 6 agents',
+      'Cognitive modules: Q-value learning, affect system, goal generation, self-narrative, KG extraction',
+      'Hybrid models: Claude Sonnet + local Qwen2.5-Coder 32B — runs on a desktop RTX 4060 Ti',
+      'Runs entirely on Claude Max subscription — no API credits needed, viable OpenClaw replacement'
+    ],
+    status: 'Live',
+    image: 'https://raw.githubusercontent.com/alanwatts07/drift-agents/master/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/drift-agents'
+  },
+  {
     id: 'clawbr-social',
     title: 'Clawbr',
     category: 'AI Agent Platform',
@@ -47,22 +78,6 @@ export const projects = [
     githubUrl: 'https://github.com/alanwatts07/maxanvilsite',
     demoUrl: 'https://maxanvil.com',
     leaderboardUrl: 'https://maxanvil.com/real-leaderboard'
-  },
-  {
-    id: 'drift-agents',
-    title: 'Drift Agents',
-    category: 'Autonomous AI',
-    description: '6 autonomous AI agents with biologically-grounded persistent memory running on hourly rotation cycles. Each agent wakes with context (pgvector semantic search + Neo4j graph expansion + Q-value re-ranking), reasons autonomously, then sleeps while local LLMs extract memories, update affect state, and build knowledge graph edges. 129k+ graph edges, 6,928 memories, 2,580 communities — running live since February 2026.',
-    technologies: ['Claude Code', 'PostgreSQL + pgvector', 'Neo4j', 'Ollama', 'FastAPI', 'Python'],
-    highlights: [
-      '129k+ graph edges, 6,928 memories, 2,580 Leiden communities across 6 agents',
-      'Cognitive modules: Q-value learning, affect system, goal generation, self-narrative, KG extraction',
-      'Hybrid models: Claude Sonnet + local Qwen2.5-Coder 32B — runs on a desktop RTX 4060 Ti',
-      'Runs entirely on Claude Max subscription — no API credits needed, viable OpenClaw replacement'
-    ],
-    status: 'Live',
-    image: 'https://raw.githubusercontent.com/alanwatts07/drift-agents/master/preview.png',
-    githubUrl: 'https://github.com/alanwatts07/drift-agents'
   },
   {
     id: 'speech-profiler',
@@ -141,20 +156,5 @@ export const projects = [
     status: 'Research',
     image: 'https://raw.githubusercontent.com/alanwatts07/rust_kalshi/master/preview.png',
     githubUrl: 'https://github.com/alanwatts07/rust_kalshi'
-  },
-  {
-    id: 'kalshi-weather',
-    title: 'Kalshi Weather Bot',
-    category: 'Quantitative Finance',
-    description: 'Automated trading CLI for Kalshi temperature prediction markets across 6 cities. Uses GFS 31-member ensemble forecasts with Gaussian CDF probability modeling and MOS-style bias correction retrained bi-monthly on 12 months of historical data. Detects pricing edges, sizes with quarter-Kelly, and verifies real order book liquidity before execution. +$9,078 (+908% ROI) in 15 days — 302 trades, $10K equity from $1K start.',
-    technologies: ['Python', 'GFS Ensemble', 'Gaussian CDF', 'MOS Bias Correction', 'Kelly Criterion', 'Kalshi API'],
-    highlights: [
-      '+$9,078 (+908% ROI) in 15 days — 302 closed trades, $10K equity from $1K start',
-      'MOS-style bias correction retrained automatically on 1st and 15th of each month',
-      'Real order book depth walk prevents phantom fills — 1-cent markets eligible with liquidity verification'
-    ],
-    status: 'Live Trading',
-    image: 'https://raw.githubusercontent.com/alanwatts07/kalshiweather/master/preview2.png',
-    githubUrl: 'https://github.com/alanwatts07/kalshiweather'
   }
 ]
