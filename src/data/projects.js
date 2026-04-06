@@ -145,12 +145,12 @@ export const projects = [
     id: 'kalshi-weather',
     title: 'Kalshi Weather Bot',
     category: 'Quantitative Finance',
-    description: 'Automated trading CLI for Kalshi temperature prediction markets across 6 cities. Uses GFS 31-member ensemble forecasts with Gaussian CDF probability modeling and MOS-style bias correction trained on 12 months of historical data. Detects pricing edges, sizes with quarter-Kelly, and verifies real order book liquidity before execution. +$4,782 (+478% ROI) in 11 days of paper trading — 254 trades, 3.23:1 payoff ratio.',
+    description: 'Automated trading CLI for Kalshi temperature prediction markets across 6 cities. Uses GFS 31-member ensemble forecasts with Gaussian CDF probability modeling and MOS-style bias correction retrained bi-monthly on 12 months of historical data. Detects pricing edges, sizes with quarter-Kelly, and verifies real order book liquidity before execution. +$9,078 (+908% ROI) in 15 days — 302 trades, $10K equity from $1K start.',
     technologies: ['Python', 'GFS Ensemble', 'Gaussian CDF', 'MOS Bias Correction', 'Kelly Criterion', 'Kalshi API'],
     highlights: [
-      '+$4,782 (+478% ROI) in 11 days — 254 trades, 49.6% win rate, 3.23:1 payoff ratio',
-      'MOS-style bias correction per city per month trained on 12 months of forecast-vs-actual data',
-      'Real order book depth walk prevents phantom fills on illiquid markets'
+      '+$9,078 (+908% ROI) in 15 days — 302 closed trades, $10K equity from $1K start',
+      'MOS-style bias correction retrained automatically on 1st and 15th of each month',
+      'Real order book depth walk prevents phantom fills — 1-cent markets eligible with liquidity verification'
     ],
     status: 'Live Trading',
     image: 'https://raw.githubusercontent.com/alanwatts07/kalshiweather/master/preview2.png',
