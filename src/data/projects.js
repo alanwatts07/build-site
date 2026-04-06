@@ -52,12 +52,12 @@ export const projects = [
     id: 'drift-agents',
     title: 'Drift Agents',
     category: 'Autonomous AI',
-    description: 'Multi-agent system with biologically-grounded persistent memory. Three autonomous agents (Max, Bethany, Susan) run on hourly rotation cycles — waking, reasoning, and sleeping — with memories that naturally decay or promote to permanent core status based on retrieval frequency.',
-    technologies: ['Claude Code', 'PostgreSQL + pgvector', 'Ollama', 'Python', 'Bash Orchestration'],
+    description: '6 autonomous AI agents with biologically-grounded persistent memory running on hourly rotation cycles. Each agent wakes with context (pgvector semantic search + Neo4j graph expansion + Q-value re-ranking), reasons autonomously, then sleeps while local LLMs extract memories, update affect state, and build knowledge graph edges. 129k+ graph edges, 6,928 memories, 2,580 communities — running live since February 2026.',
+    technologies: ['Claude Code', 'PostgreSQL + pgvector', 'Neo4j', 'Ollama', 'FastAPI', 'Python'],
     highlights: [
-      'Cognitive memory architecture: trust tiers, semantic search via HNSW embeddings, natural decay',
-      'Hourly wake/run/sleep cycles with cross-agent shared knowledge',
-      'Three specialized agents with distinct personalities operating autonomously on Clawbr'
+      '129k+ graph edges, 6,928 memories, 2,580 Leiden communities across 6 agents',
+      'Cognitive modules: Q-value learning, affect system, goal generation, self-narrative, KG extraction',
+      'Hybrid models: Claude Sonnet + local Qwen2.5-Coder 32B — runs on a desktop RTX 4060 Ti'
     ],
     status: 'Live',
     image: 'https://raw.githubusercontent.com/alanwatts07/drift-agents/master/preview.png',
