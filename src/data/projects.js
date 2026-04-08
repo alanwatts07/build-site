@@ -3,12 +3,12 @@ export const projects = [
     id: 'void-technology',
     title: 'Void Technology',
     category: 'Web Development & Brand Scaling',
-    description: 'Web development and managed services platform for Void Technology. Built a modern, high-performance site for a brand scaling agency with integrated Stripe payments, managed hosting, and SEO — handling design, development, and deployment from concept to production.',
+    description: 'Team project for Void Technology, a startup offering security, AI, and web services. Contributed to the company\'s production site alongside co-founders — integrated Stripe payments, managed hosting infrastructure, and built out the frontend from shared codebase to deployment.',
     technologies: ['TypeScript', 'Next.js', 'Stripe', 'Docker', 'CSS', 'Vercel'],
     highlights: [
+      'Collaborative startup codebase — contributing to a shared repo with co-founders',
       'Integrated Stripe payments for service packages and subscriptions',
-      'Full website build for a web development & managed services brand',
-      'End-to-end brand presence: design, development, managed hosting, and SEO'
+      'End-to-end delivery: frontend, hosting infrastructure, SEO, and deployment'
     ],
     status: 'Live',
     image: '/void-preview.png',
