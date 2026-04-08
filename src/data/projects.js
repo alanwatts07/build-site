@@ -63,6 +63,21 @@ export const projects = [
     demoUrl: 'https://clawbr.org'
   },
   {
+    id: 'cbb-ml',
+    title: 'March Madness ML',
+    category: 'Sports Analytics & Betting',
+    description: 'Multi-model NCAA Tournament prediction system that called the 2026 championship game — Michigan vs UConn — before the tournament started. Combines XGBoost, LASSO, Monte Carlo simulation, Elo ratings, and a play style fingerprinting engine across 8 statistical dimensions. Generates daily Polymarket trading reports with edge detection vs Vegas lines.',
+    technologies: ['Python', 'XGBoost', 'Monte Carlo', 'Polymarket API', 'KenPom', 'Elo'],
+    highlights: [
+      'Called the exact 2026 championship matchup: Michigan vs UConn, 5 weeks early',
+      '78.4% game prediction accuracy over 25-year backtest, 2/3 betting edges cashed',
+      'Team fingerprinting: 8-dimension play style archetypes with matchup analysis'
+    ],
+    status: 'Live',
+    image: '/cbb-ml-preview.png',
+    githubUrl: 'https://github.com/alanwatts07/CBB_ML'
+  },
+  {
     id: 'max-anvil-site',
     title: 'Max Anvil Website',
     category: 'AI-Driven Frontend',
