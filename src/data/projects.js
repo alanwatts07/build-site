@@ -1,5 +1,22 @@
 export const projects = [
   {
+    id: 'djmc-karaoke',
+    title: 'DJ MC Karaoke',
+    category: 'Full-Stack Web App',
+    description: 'Self-serve karaoke queue app built and run live for DJ MC at The Nerve in Haverhill, MA. Singers scan a QR taped to the speaker, drop their name + song, and watch a blind status tier on their phone — no numeric position, so the host can reorder freely. The host runs a private dashboard with drag-reorder, Express Lane, hold, lifecycle controls, private notes, a tip log, and a rotation algorithm that prevents back-to-back repeats.',
+    technologies: ['Next.js 16', 'React 19', 'Supabase', 'Tailwind v4', 'dnd-kit', 'Vercel'],
+    highlights: [
+      'Blind queue UX: singers see only Coming Up / You\'re Up! / Thanks — host reorders without breaking promises',
+      'Zero client-side Supabase: RLS locked down, all I/O proxied through service-role routes so notes & tips never reach the browser',
+      'dnd-kit drag-reorder host dashboard with rotation algorithm preventing back-to-back singers',
+      'HMAC cookie auth with defense-in-depth: proxy redirect plus per-route checks'
+    ],
+    status: 'Live',
+    image: 'https://raw.githubusercontent.com/alanwatts07/djmc-karaoke/main/public/preview.png',
+    githubUrl: 'https://github.com/alanwatts07/djmc-karaoke',
+    demoUrl: 'https://kara.mattcorwin.dev'
+  },
+  {
     id: 'void-technology',
     title: 'Void Technology',
     category: 'Web Development & Brand Scaling',

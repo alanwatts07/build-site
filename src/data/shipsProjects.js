@@ -15,6 +15,33 @@ export const openSourceContribution = {
 
 export const shipsProjects = [
   {
+    id: 'djmc-karaoke',
+    title: 'DJ MC Karaoke Queue',
+    oneLiner: 'Self-serve karaoke sign-up — singers scan a QR, drop name + song, and watch a live status tier; the host runs a drag-reorder dashboard with Express Lane, holds, and a tip log. Next.js 16 + Supabase, live in production.',
+    repo: 'https://github.com/alanwatts07/djmc-karaoke',
+    live: 'https://kara.mattcorwin.dev',
+    created: '2026-05-19',
+    velocityStat: 'Live in production · QR-to-stage in seconds · zero client-side DB access',
+    keyLinks: [
+      { label: 'Harden queue against bar-night flooding + races', url: 'https://github.com/alanwatts07/djmc-karaoke/commit/6df004c2ee77aca15181ecdc21d1bf67cc8e3471' },
+      { label: 'Fix queue collision in rotation + drag-reorder', url: 'https://github.com/alanwatts07/djmc-karaoke/commit/23f3be2c048bb9120ed482aa0859dbab95884f0b' },
+      { label: 'Night archive, stats page, host inline-edit', url: 'https://github.com/alanwatts07/djmc-karaoke/commit/966b5c173f314d7368c267fa4df45b0ef56effe1' },
+      { label: 'Session toggle, setlist history, returning-singer redirect', url: 'https://github.com/alanwatts07/djmc-karaoke/commit/3456b142f0b23d9ffaa8333096d9c0cd5bf91e5e' },
+    ],
+    iDid: [
+      'Status-tier UX over numeric position (queued → getting closer → on deck) — a deliberate product call to keep singers relaxed',
+      'No client-side Supabase: RLS locked down, all reads/writes proxy through Next.js routes so notes, queue position, and tips never reach the browser',
+      'Polling over realtime — realtime would have leaked private columns through Supabase row-level publication',
+      'Defense-in-depth auth: HMAC-signed host cookie, proxy.ts redirect plus a per-route isHostAuthed() check (proxy alone is not a security boundary in Next.js 16)',
+    ],
+    claudeDid: [
+      'Built the dnd-kit drag-reorder host dashboard with lifecycle controls (Express Lane, hold, done, private notes, tip log)',
+      'Implemented tier derivation in lib/tiers.ts — auto-deriving statuses from queue_position after every mutation',
+      'Generated the Supabase schema and service-role API routes for safe-column-only singer fetches',
+      'Added night archive, stats page, setlist history, returning-singer redirect, and an S/M/L card density toggle',
+    ],
+  },
+  {
     id: 'drift-agents',
     title: 'Drift Agents — 6 Autonomous AI Agents',
     oneLiner: '129k+ graph edges, 6,928 memories, Neo4j GraphRAG, Q-value learning, n8n news roundtables — running live since Feb 2026',
