@@ -2,7 +2,7 @@ const workflowSteps = [
   {
     number: '01',
     title: 'Discovery & Scoping',
-    description: 'Rapid requirements gathering with AI-assisted research. I analyze market context, technical constraints, and existing solutions to define a focused MVP scope.'
+    description: 'Translate business and customer requirements into a technical design. I analyze market context, technical constraints, and existing solutions to define a focused MVP scope.'
   },
   {
     number: '02',

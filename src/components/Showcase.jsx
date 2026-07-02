@@ -10,9 +10,9 @@ export default function Showcase() {
             Technical MVPs
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
-            Production-ready prototypes built with modern architectures.
-            Each project demonstrates end-to-end technical execution from
-            concept to deployment.
+            AI-driven solutions and automation, shipped end to end.
+            Each project translates a real requirement into a technical
+            design and deployed, running code — with end-to-end ownership.
           </p>
         </div>
 

@@ -2,24 +2,25 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const skills = {
-  'Languages': ['Python', 'TypeScript', 'JavaScript', 'Rust', 'SQL'],
-  'Frameworks': ['FastAPI', 'Next.js 15', 'React 19', 'PyTorch'],
+  'Languages': ['Python', 'TypeScript', 'JavaScript (Node.js)', 'Rust', 'SQL'],
+  'Frameworks': ['FastAPI', 'Next.js 15', 'React 19', 'REST APIs', 'PyTorch'],
   'AI/ML': ['Claude API', 'LLM Orchestration', 'Multi-Agent Systems', 'MCP', 'RAG', 'GraphRAG', 'XGBoost', 'Whisper', 'TCN', 'Agentic Architectures', 'Prompt Design', 'Performance Optimization'],
   'Databases': ['PostgreSQL', 'pgvector', 'Neo4j', 'Redis'],
-  'Infrastructure': ['Docker', 'Railway', 'Vercel', 'GitHub Actions', 'Icecast', 'Liquidsoap', 'Cloud-native Deployment', 'API Integration'],
+  'Infrastructure': ['Docker', 'CI/CD (GitHub Actions)', 'Railway', 'Vercel', 'Icecast', 'Liquidsoap', 'Cloud-native Deployment', 'API Integration'],
   'Tools': ['Claude Code', 'WebSocket', 'Optuna', 'pyannote', 'Tailwind CSS', 'Git'],
 }
 
 const experience = [
   {
-    title: 'Freelance AI Engineer',
+    title: 'Freelance AI/ML & Full-Stack Engineer',
     company: 'Independent',
     period: '2025 – Present',
-    description: 'Ship production AI systems end-to-end — architecture, implementation, and cloud-native deployment.',
+    description: 'Build and ship AI-driven systems end to end — translate requirements into technical designs, implement, and deploy with end-to-end ownership.',
     highlights: [
-      'Delivered nine production projects in trading, social platforms, federal data pipelines, and multi-agent systems using MCP and GraphRAG',
-      'Apply swarm methodology: break work into parallel streams, run multiple AI agents on independent subtasks with Optuna optimization, then integrate outputs',
-      'Ship full systems end-to-end with Docker and WebSocket, deploying reliable and scalable solutions with cloud-native practices',
+      'Delivered eleven production projects — including a paying-client college basketball ML platform that called the 2026 championship game — spanning trading, social platforms, federal data pipelines, and agentic systems using MCP and GraphRAG',
+      'Open source incident remediation: diagnosed and fixed an OpenClaw gateway crash-loop (43,000+ restarts) with a fast-fail port probe, carried through 13 review comments',
+      'Apply swarm methodology: break work into parallel streams, run multiple AI coding assistants on independent subtasks, then review and integrate',
+      'Ship full systems end-to-end with REST APIs, Docker, WebSocket, and CI/CD, deploying reliable and scalable solutions with cloud-native practices',
     ],
   },
   {
@@ -196,12 +197,12 @@ export default function About() {
           </h1>
 
           <div className="inline-block px-4 py-1 mb-6 border border-indigo-500/30 rounded-full">
-            <span className="text-sm text-indigo-400 tracking-wider">AGENTIC AI ENGINEER</span>
+            <span className="text-sm text-indigo-400 tracking-wider">AI &amp; AUTOMATION ENGINEER · SOLUTIONS / FORWARD-DEPLOYED</span>
           </div>
 
           <p className="text-xl text-gray-400 leading-relaxed max-w-3xl">
             <TypeWriter
-              text="Agentic AI Engineer with senior-level experience designing and deploying production-grade LLM-driven systems — multi-agent orchestration, memory architectures, and retrieval-augmented pipelines. Nine end-to-end AI projects shipped, from automated trading engines to multi-agent data platforms."
+              text="AI & Automation Engineer who builds and ships AI-driven systems end to end — I translate business requirements into technical designs and deployed, running code. LLM orchestration, agentic systems, REST APIs (Node.js / TypeScript / Python), and CI/CD. Eleven production systems shipped, from a paying-client ML platform that called the 2026 championship game to automated trading engines and multi-agent data platforms."
               speed={15}
             />
           </p>

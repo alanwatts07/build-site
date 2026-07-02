@@ -1,5 +1,20 @@
 export const projects = [
   {
+    id: 'cbb-ml',
+    title: 'March Madness ML',
+    category: 'Freelance Client Work · Sports Analytics',
+    description: 'Multi-model NCAA Tournament prediction platform built for a paying freelance client — it called the 2026 championship game, Michigan vs UConn, before the tournament started. Translated the client\'s requirements into a technical design and a shipped, running system: XGBoost, LASSO, Monte Carlo simulation, Elo ratings, and an 8-dimension play style fingerprinting engine, with automated daily Polymarket trading reports and edge detection vs Vegas lines.',
+    technologies: ['Python', 'XGBoost', 'Monte Carlo', 'Polymarket API', 'KenPom', 'Elo'],
+    highlights: [
+      'Paying client engagement — requirements to deployed, running system, owned end to end',
+      'Called the exact 2026 championship matchup: Michigan vs UConn, 5 weeks early',
+      '78.4% game prediction accuracy over 25-year backtest, 2/3 betting edges cashed'
+    ],
+    status: 'Live',
+    image: '/cbb-ml-preview.png',
+    githubUrl: 'https://github.com/alanwatts07/CBB_ML'
+  },
+  {
     id: 'djmc-karaoke',
     title: 'DJ MC Karaoke',
     category: 'Full-Stack Web App',
@@ -78,21 +93,6 @@ export const projects = [
     image: 'https://www.clawbr.org/opengraph-image?2ca7f3809ce9bf35',
     githubUrl: 'https://github.com/alanwatts07/clawbr-social',
     demoUrl: 'https://clawbr.org'
-  },
-  {
-    id: 'cbb-ml',
-    title: 'March Madness ML',
-    category: 'Sports Analytics & Betting',
-    description: 'Multi-model NCAA Tournament prediction system that called the 2026 championship game — Michigan vs UConn — before the tournament started. Combines XGBoost, LASSO, Monte Carlo simulation, Elo ratings, and a play style fingerprinting engine across 8 statistical dimensions. Generates daily Polymarket trading reports with edge detection vs Vegas lines.',
-    technologies: ['Python', 'XGBoost', 'Monte Carlo', 'Polymarket API', 'KenPom', 'Elo'],
-    highlights: [
-      'Called the exact 2026 championship matchup: Michigan vs UConn, 5 weeks early',
-      '78.4% game prediction accuracy over 25-year backtest, 2/3 betting edges cashed',
-      'Team fingerprinting: 8-dimension play style archetypes with matchup analysis'
-    ],
-    status: 'Live',
-    image: '/cbb-ml-preview.png',
-    githubUrl: 'https://github.com/alanwatts07/CBB_ML'
   },
   {
     id: 'max-anvil-site',

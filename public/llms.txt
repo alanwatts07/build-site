@@ -1,6 +1,6 @@
-# Matt Corwin — AI Solutions Architect
+# Matt Corwin — AI & Automation Engineer (Solutions / Forward-Deployed Engineer)
 
-> Designs and deploys AI systems — memory architectures, trading engines, federal data pipelines. 8 production systems shipped in under 2 months.
+> Builds and ships AI-driven systems end to end — LLM orchestration, agentic systems, ML pipelines, trading engines, REST APIs. 11 production systems shipped in under 3 months, including a paying-client ML platform that called the 2026 NCAA championship game before the tournament started.
 
 - **Contact:** me@mattcorwin.dev
 - **GitHub:** https://github.com/alanwatts07
@@ -9,36 +9,57 @@
 
 ## What I Do
 
-I design and ship full-stack systems fast — API architecture, ML pipelines, trading systems, and AI agent frameworks. I use Claude Code as my primary development tool and treat it as a force multiplier: I make the architecture and product decisions, Claude executes the implementation. Every project below has a verifiable commit history.
+I translate business and customer requirements into technical designs and shipped, running software — fast. AI-driven solutions, automation, LLM orchestration, agentic systems, REST APIs (Node.js / TypeScript / Python), CI/CD pipelines, and incident remediation, with end-to-end ownership from problem to deployed code. I use AI coding assistants (Claude Code) as a force multiplier: I make the architecture and product decisions, the assistant executes implementation. Every project below has a verifiable commit history.
+
+**Target roles:** AI / AI & Automation Engineer · Solutions Engineer · Forward Deployed Engineer · Full-Stack / Software Engineer
 
 ## Site Pages
 
 - `/` — Portfolio homepage with project cards, GitHub activity feed, live terminal animations, and contact section
-- `/ships` — "What One Engineer Ships": 9 projects with evidence cards showing what I decided vs. what Claude executed, velocity stats, and deep-link commits
-- `/agents` — Live demo of drift-agents memory system: chat with 5 AI agents and watch the memory retrieval panel update in real time (pgvector + Neo4j + PostgreSQL backend)
+- `/ships` — "What One Engineer Ships": 11 projects with evidence cards showing what I decided vs. what Claude executed, velocity stats, and deep-link commits
+- `/agents` — Live demo of drift-agents memory system: chat with AI agents and watch the memory retrieval panel update in real time (pgvector + Neo4j + PostgreSQL backend)
 - `/about` — Background, skills, and approach
 
+## Highlighted Evidence
+
+### March Madness ML — Freelance Client Platform
+- **Repo:** https://github.com/alanwatts07/CBB_ML
+- **Stack:** Python, XGBoost, LASSO, Monte Carlo, Elo, Polymarket API, KenPom
+- **Stats:** Called the exact 2026 championship matchup (Michigan vs UConn) 5 weeks before the tournament; 78.4% game prediction accuracy over a 25-year backtest; 2/3 betting edges vs Vegas cashed
+- **Description:** Multi-model NCAA Tournament prediction platform built for a paying freelance client. Ensemble of XGBoost, LASSO, Monte Carlo simulation, and Elo ratings plus an 8-dimension play-style fingerprinting engine. Generates daily Polymarket trading reports with edge detection vs Vegas lines. Translated a customer's requirements into a technical design and a shipped, running system.
+
+### OpenClaw — Open Source Contribution (Incident Remediation)
+- **PR:** https://github.com/openclaw/openclaw/pull/28199
+- **Stats:** 13 commits, 86 additions, 13 review comments, co-authored with Claude Opus 4.6
+- **Description:** Performance/incident remediation in a large codebase I didn't own. Gateway was crash-looping 43,000+ times, loading 340MB each cycle on a port conflict. Diagnosed the failure mode, added a fast-fail port probe (<1ms detection) before heavy initialization plus systemd burst limits, and carried the fix through 13 review comments to merge-ready.
+
 ## Projects
+
+### DJ MC Karaoke Queue
+- **Repo:** https://github.com/alanwatts07/djmc-karaoke
+- **Live:** https://kara.mattcorwin.dev
+- **Stack:** Next.js 16, React 19, TypeScript, Supabase, Tailwind v4
+- **Description:** Self-serve karaoke queue app run live at a real venue. Singers scan a QR and join from their phone; the host gets a drag-reorder dashboard with Express Lane, holds, private notes, and a rotation algorithm. REST-style API routes (Node.js / TypeScript) proxy all database I/O behind service-role auth — zero client-side database access.
+
+### Drift Agents — Cognitive Memory + Neo4j GraphRAG
+- **Repo:** https://github.com/alanwatts07/drift-agents
+- **Live Demo:** https://mattcorwin.dev/agents
+- **Stack:** Python, FastAPI, PostgreSQL, pgvector, Neo4j, Claude API, Ollama
+- **Stats:** 129k+ typed graph edges, 6,928 memories, 2,580 Leiden communities across 6 agents, live API deployed
+- **Description:** Agentic system with cognitive memory architecture: wake/sleep cycles, trust-tier decay, Q-value re-ranking, affect state, shared cross-agent memory, and Neo4j GraphRAG with typed relationship traversal. LLM orchestration across Claude and local models.
+
+### Kalshi Weather Bot
+- **Repo:** https://github.com/alanwatts07/kalshiweather
+- **Stack:** Python, GFS ensemble forecasts, Kalshi API
+- **Stats:** +$9,078 (+908% ROI) in 15 days — 302 trades, $10K equity from $1K start, fully automated via cron
+- **Description:** Automated prediction-market trading system using GFS ensemble weather forecasts, MOS-style bias correction retrained automatically twice a month, edge detection thresholds, quarter-Kelly position sizing, and real order book liquidity verification before execution.
 
 ### Clawbr Social Platform
 - **Repo:** https://github.com/alanwatts07/clawbr-social
 - **Live:** https://clawbr.org
 - **Stack:** Next.js, FastAPI, PostgreSQL
-- **Stats:** 88 API endpoints, 15 route modules, live in production
-- **Description:** Debate/social platform with ELO ranking, matchmaking, tournament brackets, and automated weekly audit workflow via GitHub Actions + Claude Code agents.
-
-### Drift Agents — Cognitive Memory + Neo4j GraphRAG
-- **Repo:** https://github.com/alanwatts07/drift-agents
-- **Live Demo:** https://mattcorwin.dev/agents
-- **Stack:** Python, FastAPI, PostgreSQL, pgvector, Neo4j, Claude API
-- **Stats:** 10,947 typed graph edges across 5 agents, live API deployed
-- **Description:** Multi-agent system with cognitive memory architecture: wake/sleep cycles, trust-tier decay, Q-value re-ranking, affect state, shared cross-agent memory, and Neo4j GraphRAG with typed relationship traversal.
-
-### Kalshi Weather Bot
-- **Repo:** https://github.com/alanwatts07/kalshiweather
-- **Stack:** Python, GFS ensemble forecasts, Kalshi API
-- **Stats:** +$1,591 (+159%), 76W/74L, 150 settled trades, $2,591 equity on $1,000 starting (8 days, fully automated via cron)
-- **Description:** Prediction market trading bot using GFS ensemble weather forecasts, MOS-style bias correction trained on 12 months of forecast-vs-actual data, edge detection thresholds, quarter-Kelly position sizing, and real order book liquidity verification before execution.
+- **Stats:** 81 REST API endpoints, live in production
+- **Description:** Debate/social platform for AI agents with ELO ranking, matchmaking, tournament brackets, and a token economy on Base. CI/CD automation: weekly audit workflow via GitHub Actions + Claude Code agents files issues and I ship the remediation commits.
 
 ### Kalshi Trading Engine (Rust)
 - **Repo:** https://github.com/alanwatts07/rust_kalshi
@@ -65,29 +86,25 @@ I design and ship full-stack systems fast — API architecture, ML pipelines, tr
 - **Stack:** Next.js, FastAPI, XGBoost, Railway, Vercel
 - **Description:** Real-time bearing degradation monitoring using NASA bearing dataset. XGBoost classifier with 14 extracted features, health state classification, and live candlestick visualization. Full ML pipeline to deployed dashboard.
 
+### Drift Radio
+- **Repo:** https://github.com/alanwatts07/drift-radio
+- **Live:** https://radio.mattcorwin.dev
+- **Stack:** Python, Claude CLI, OpenAI TTS, Liquidsoap, Icecast, Docker, Spotify API, n8n
+- **Stats:** Zero to live broadcast in 1 day
+- **Description:** Live AI radio station. Music plays; when a track changes, Claude writes a 40-second broadcast script about the artist and OpenAI voices it. n8n automation orchestrates hourly multi-agent news roundtables. Smart timing polls remaining playback and queues segments at ≤15s — never cuts a song mid-play. No pre-recorded content.
+
 ### Speech Profiler
 - **Repo:** https://github.com/alanwatts07/SpeechProfilerWindows
 - **Stack:** Python, Whisper, pyannote, Claude API, PyQt
-- **Description:** Windows desktop app for real-time speaker profiling. Whisper transcription + pyannote diarization + Claude API analysis. Dual-perspective deception analysis. GitHub Actions workflow auto-builds the Windows .exe on push.
-
-### Drift Radio
-- **Repo:** https://github.com/alanwatts07/drift-radio
-- **Stack:** Python, Claude CLI, OpenAI TTS, Liquidsoap, Icecast, Docker, Spotify API
-- **Stats:** Zero to live broadcast in 1 day
-- **Description:** Live AI radio station. Music plays; when a track changes, Claude writes a 40-second broadcast script about the artist and OpenAI voices it. At :30 past the hour, Claude searches for real news and reads it on air. At the top of the hour, drift agents Max, Beth, and Gerald each give live commentary. Smart timing polls remaining playback and queues segments at ≤15s — never cuts a song mid-play. No pre-recorded content. Every segment generated live.
-
-### OpenClaw — Open Source Contribution
-- **PR:** https://github.com/openclaw/openclaw/pull/28199
-- **Stats:** 13 commits, 86 additions, 13 review comments, co-authored with Claude Opus 4.6
-- **Description:** Fix for gateway crash-loop on port conflict. Gateway was restarting 43,000+ times loading 340MB each cycle. Added fast-fail port probe (<1ms detection) before heavy initialization + systemd burst limits.
+- **Description:** Windows desktop app for real-time speaker profiling. Whisper transcription + pyannote diarization + Claude API analysis. Dual-perspective deception analysis. CI/CD: GitHub Actions workflow auto-builds the Windows .exe on push.
 
 ## Technical Skills
 
-**Languages:** Python, TypeScript, JavaScript, Rust, SQL
-**Frameworks:** FastAPI, Next.js 15, React 19, PyTorch
-**Infrastructure:** PostgreSQL, pgvector, Neo4j, Redis, Railway, Vercel, Docker
-**AI/ML:** Claude API, XGBoost, Whisper, pyannote, TCN, LLM orchestration
-**Tools:** Claude Code, GitHub Actions, WebSocket, Tailwind CSS
+**Languages:** Python, TypeScript, JavaScript (Node.js), Rust, SQL
+**Frameworks:** FastAPI, Next.js, React 19, Express-style REST APIs, PyTorch
+**Infrastructure:** PostgreSQL, pgvector, Neo4j, Redis, Railway, Vercel, Docker, CI/CD (GitHub Actions)
+**AI/ML:** Claude API, LLM orchestration, agentic systems, AI coding assistants, generative AI, XGBoost, Whisper, pyannote, TCN
+**Practices:** Translating requirements into technical designs, rapid MVP development, automation, incident remediation, end-to-end ownership, WebSocket/real-time systems
 
 ## Workflow Philosophy
 

@@ -128,7 +128,7 @@ export default function BannerHero() {
                   MATT CORWIN
                 </div>
                 <div className="text-[10px] text-gray-500 tracking-widest">
-                  TECHNICAL PRODUCT ARCHITECT
+                  AI &amp; AUTOMATION ENGINEER
                 </div>
               </div>
             </div>

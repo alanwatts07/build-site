@@ -3,8 +3,8 @@ export const openSourceContribution = {
   description: 'fix: fail fast on port conflict before heavy gateway initialization',
   pr: 'https://github.com/openclaw/openclaw/pull/28199',
   issue: 'https://github.com/openclaw/openclaw/issues/28191',
-  problem: 'Gateway crash-looped 43,000+ times on port conflict, loading 340MB each cycle.',
-  fix: 'Fast-fail port probe before heavy init (<1ms detection) + systemd burst limits.',
+  problem: 'Gateway crash-looped 43,000+ times on port conflict, loading 340MB each cycle. Incident + performance remediation in a large codebase I didn\'t own.',
+  fix: 'Fast-fail port probe before heavy init (<1ms detection) + systemd burst limits — carried through 13 review comments to merge-ready.',
   stats: {
     commits: 13,
     additions: 86,
@@ -14,6 +14,28 @@ export const openSourceContribution = {
 }
 
 export const shipsProjects = [
+  {
+    id: 'cbb-ml',
+    title: 'March Madness ML — Freelance Client Platform',
+    oneLiner: 'Built for a paying client — called the 2026 championship game, Michigan vs UConn, 5 weeks before the tournament started',
+    repo: 'https://github.com/alanwatts07/CBB_ML',
+    created: '2025-11-14',
+    velocityStat: 'Paying client · predicted exact championship matchup · 78.4% accuracy over 25-year backtest',
+    keyLinks: [],
+    iDid: [
+      'Translated a client\'s requirements into a technical design and a shipped, running system — owned end to end',
+      'Multi-model architecture: XGBoost, LASSO, Monte Carlo, Elo — ensemble disagreement identified both finalists',
+      'Play style fingerprinting: 8-dimension archetypes with 25 years of tournament winner analysis',
+      'Polymarket edge detection: daily trading reports comparing model odds vs market',
+      'Betting edges vs Vegas: 2/3 cashed (Illinois +3.5, Michigan -9.5)',
+    ],
+    claudeDid: [
+      'Built KenPom Monte Carlo simulator (10,000+ iterations)',
+      'Generated XGBoost champion-profile model with backtest pipeline',
+      'Implemented Polymarket Gamma API integration and PDF report generation',
+      'Team fingerprint classification engine across 8 statistical dimensions',
+    ],
+  },
   {
     id: 'djmc-karaoke',
     title: 'DJ MC Karaoke Queue',
@@ -90,27 +112,6 @@ export const shipsProjects = [
       'Generated bias correction training from archived forecasts',
       'Implemented Kalshi API auth and order execution',
       'CLI with scan, trade, paper, and train-bias commands',
-    ],
-  },
-  {
-    id: 'cbb-ml',
-    title: 'March Madness ML',
-    oneLiner: 'Called the 2026 championship game — Michigan vs UConn — 5 weeks before the tournament started',
-    repo: 'https://github.com/alanwatts07/CBB_ML',
-    created: '2025-11-14',
-    velocityStat: 'Predicted exact championship matchup · 78.4% accuracy over 25-year backtest',
-    keyLinks: [],
-    iDid: [
-      'Multi-model architecture: XGBoost, LASSO, Monte Carlo, Elo — ensemble disagreement identified both finalists',
-      'Play style fingerprinting: 8-dimension archetypes with 25 years of tournament winner analysis',
-      'Polymarket edge detection: daily trading reports comparing model odds vs market',
-      'Betting edges vs Vegas: 2/3 cashed (Illinois +3.5, Michigan -9.5)',
-    ],
-    claudeDid: [
-      'Built KenPom Monte Carlo simulator (10,000+ iterations)',
-      'Generated XGBoost champion-profile model with backtest pipeline',
-      'Implemented Polymarket Gamma API integration and PDF report generation',
-      'Team fingerprint classification engine across 8 statistical dimensions',
     ],
   },
   {

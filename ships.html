@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="What One Engineer Ships — 7 projects in under 2 months, every commit verifiable. Solo engineer using Claude Code as primary dev tool." />
+    <meta name="description" content="What One Engineer Ships — 11 projects in under 3 months, every commit verifiable. AI & Automation Engineer building and shipping AI-driven systems end to end with Claude Code." />
     <link rel="llms" type="text/plain" href="/llms.txt" />
     <meta name="llms-txt" content="https://mattcorwin.dev/llms.txt" />
     <meta name="theme-color" content="#0a0a0a" />
@@ -13,14 +13,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mattcorwin.dev/ships" />
     <meta property="og:title" content="What One Engineer Ships | Matt Corwin" />
-    <meta property="og:description" content="9 projects shipped in under 2 months. Solo engineer. No team. Every project architected and deployed with Claude Code. Commit history proves it." />
+    <meta property="og:description" content="11 projects shipped in under 3 months. Solo engineer. No team. Every project designed, built, and deployed end to end with Claude Code. Commit history proves it." />
     <meta property="og:image" content="https://mattcorwin.dev/og-image.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://mattcorwin.dev/ships" />
     <meta name="twitter:title" content="What One Engineer Ships | Matt Corwin" />
-    <meta name="twitter:description" content="9 projects shipped in under 2 months. Solo engineer. No team. Every project architected and deployed with Claude Code. Commit history proves it." />
+    <meta name="twitter:description" content="11 projects shipped in under 3 months. Solo engineer. No team. Every project designed, built, and deployed end to end with Claude Code. Commit history proves it." />
     <meta name="twitter:image" content="https://mattcorwin.dev/og-image.png" />
 
     <!-- VT323 font for Pip-Boy chat widget -->
@@ -34,11 +34,12 @@
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "What One Engineer Ships — Matt Corwin",
-      "description": "9 projects shipped in under 2 months by a solo engineer using Claude Code. Every project has verifiable commit history.",
+      "description": "11 projects shipped in under 3 months by a solo AI & Automation Engineer using Claude Code. Every project has verifiable commit history.",
       "url": "https://mattcorwin.dev/ships",
       "author": {
         "@type": "Person",
         "name": "Matt Corwin",
+        "jobTitle": "AI & Automation Engineer",
         "url": "https://mattcorwin.dev",
         "sameAs": ["https://github.com/alanwatts07"]
       },
@@ -46,53 +47,53 @@
         {
           "@type": "SoftwareSourceCode",
           "position": 1,
-          "name": "Clawbr Social Platform",
-          "description": "88 API endpoints, 15 route modules, live in production. Debate/social platform with ELO ranking, matchmaking, and automated weekly audit workflow.",
-          "codeRepository": "https://github.com/alanwatts07/clawbr-social",
-          "url": "https://clawbr.org",
-          "programmingLanguage": ["TypeScript", "Python"]
+          "name": "March Madness ML — Freelance Client Platform",
+          "description": "Multi-model NCAA prediction platform built for a paying client. Called the exact 2026 championship matchup 5 weeks early. XGBoost, LASSO, Monte Carlo, Elo, Polymarket edge detection. 78.4% accuracy over 25-year backtest.",
+          "codeRepository": "https://github.com/alanwatts07/CBB_ML",
+          "programmingLanguage": ["Python"]
         },
         {
           "@type": "SoftwareSourceCode",
           "position": 2,
+          "name": "DJ MC Karaoke Queue",
+          "description": "Self-serve karaoke queue run live at a real venue. Next.js 16 + Supabase, service-role API routes, drag-reorder host dashboard, rotation algorithm. Live in production.",
+          "codeRepository": "https://github.com/alanwatts07/djmc-karaoke",
+          "url": "https://kara.mattcorwin.dev",
+          "programmingLanguage": ["TypeScript"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 3,
           "name": "Drift Agents — Cognitive Memory + Neo4j GraphRAG",
-          "description": "Multi-agent system with 10,947 typed graph edges across 5 agents, pgvector, Neo4j GraphRAG, Q-value re-ranking, affect system, and live demo API.",
+          "description": "Agentic system with 129k+ typed graph edges across 6 agents, pgvector, Neo4j GraphRAG, Q-value re-ranking, affect system, and live demo API.",
           "codeRepository": "https://github.com/alanwatts07/drift-agents",
           "url": "https://mattcorwin.dev/agents",
           "programmingLanguage": ["Python"]
         },
         {
           "@type": "SoftwareSourceCode",
-          "position": 3,
+          "position": 4,
           "name": "Kalshi Weather Bot",
-          "description": "Prediction market trading bot. GFS ensemble forecasts + MOS bias correction. Live results: +$668 (+66.8%), 30W/27L, 57 settled trades.",
+          "description": "Automated prediction market trading system. GFS ensemble forecasts + MOS bias correction. Live results: +$9,078 (+908% ROI), 302 trades, $10K equity from $1K start.",
           "codeRepository": "https://github.com/alanwatts07/kalshiweather",
           "programmingLanguage": ["Python"]
         },
         {
           "@type": "SoftwareSourceCode",
-          "position": 4,
-          "name": "Kalshi Trading Engine",
-          "description": "High-frequency prediction market engine in Rust. 5 parallel strategies, lock-free order book, quarter-Kelly sizing.",
-          "codeRepository": "https://github.com/alanwatts07/rust_kalshi",
-          "programmingLanguage": ["Rust"]
-        },
-        {
-          "@type": "SoftwareSourceCode",
           "position": 5,
-          "name": "TCN Trading Bot",
-          "description": "Custom PyTorch Temporal Convolutional Network for crypto trading. 200+ engineered features, walk-forward validation, real-time inference.",
-          "codeRepository": "https://github.com/alanwatts07/tcn-trading-bot",
-          "programmingLanguage": ["Python"]
+          "name": "Clawbr Social Platform",
+          "description": "81 REST API endpoints, live in production. Debate/social platform with ELO ranking, matchmaking, and automated weekly audit workflow via GitHub Actions CI/CD.",
+          "codeRepository": "https://github.com/alanwatts07/clawbr-social",
+          "url": "https://clawbr.org",
+          "programmingLanguage": ["TypeScript", "Python"]
         },
         {
           "@type": "SoftwareSourceCode",
           "position": 6,
-          "name": "Whistleblower Workbench",
-          "description": "Federal fraud detection tool. 82K+ records from OIG, Medicare, USASpending.gov. ML risk scoring with z-score alerts.",
-          "codeRepository": "https://github.com/alanwatts07/whistleblower-workbench",
-          "url": "https://false-claims-suite.vercel.app",
-          "programmingLanguage": ["TypeScript", "Python"]
+          "name": "Drift Radio",
+          "description": "Live AI radio station. Claude writes broadcast scripts on track change, OpenAI voices them, n8n orchestrates hourly multi-agent news roundtables, Liquidsoap queues at natural track boundaries.",
+          "codeRepository": "https://github.com/alanwatts07/drift-radio",
+          "programmingLanguage": ["Python"]
         },
         {
           "@type": "SoftwareSourceCode",
@@ -105,14 +106,31 @@
         {
           "@type": "SoftwareSourceCode",
           "position": 8,
-          "name": "Drift Radio",
-          "description": "Live AI radio station. Claude writes broadcast scripts on track change, OpenAI voices them, Liquidsoap queues at natural track boundaries. Hourly drift agent commentary, real news breaks, never cuts a song.",
-          "codeRepository": "https://github.com/alanwatts07/drift-radio",
-          "programmingLanguage": ["Python"]
+          "name": "Kalshi Trading Engine",
+          "description": "High-frequency prediction market engine in Rust. 5 parallel strategies, lock-free order book, quarter-Kelly sizing.",
+          "codeRepository": "https://github.com/alanwatts07/rust_kalshi",
+          "programmingLanguage": ["Rust"]
         },
         {
           "@type": "SoftwareSourceCode",
           "position": 9,
+          "name": "Whistleblower Workbench",
+          "description": "Federal fraud detection tool. 82K+ records from OIG, Medicare, USASpending.gov. ML risk scoring with z-score alerts.",
+          "codeRepository": "https://github.com/alanwatts07/whistleblower-workbench",
+          "url": "https://false-claims-suite.vercel.app",
+          "programmingLanguage": ["TypeScript", "Python"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 10,
+          "name": "TCN Trading Bot",
+          "description": "Custom PyTorch Temporal Convolutional Network for crypto trading. 200+ engineered features, walk-forward validation, real-time inference.",
+          "codeRepository": "https://github.com/alanwatts07/tcn-trading-bot",
+          "programmingLanguage": ["Python"]
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "position": 11,
           "name": "Speech Profiler",
           "description": "Windows desktop app for real-time speaker profiling. Whisper + pyannote diarization + Claude API analysis. GitHub Actions auto-builds Windows exe.",
           "codeRepository": "https://github.com/alanwatts07/SpeechProfilerWindows",

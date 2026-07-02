@@ -68,7 +68,7 @@ export default function Ships() {
           </h1>
 
           <p className="text-lg text-gray-400 max-w-3xl mb-6">
-            Solo engineer. No team. Every project architected and deployed with Claude Code as primary dev tool.
+            Solo engineer. No team. Every project designed, built, and deployed end to end with Claude Code as primary dev tool.
           </p>
 
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-indigo-500/10 border border-indigo-500/30 mb-6">
@@ -122,7 +122,7 @@ export default function Ships() {
         {/* 5. Closing */}
         <section className={`text-center py-12 border-t border-indigo-500/20 transition-all duration-700 delay-500 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <blockquote className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8 italic">
-            "I'm not a developer who uses AI as a crutch. I'm an architect who uses Claude Code as a force multiplier.
+            "I'm not a developer who uses AI as a crutch. I'm an engineer who uses Claude Code as a force multiplier.
             Every decision — what to build, how to structure it, which tools to use and why — is mine.
             Claude helps me execute at a speed that would normally require a team."
           </blockquote>

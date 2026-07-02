@@ -12,16 +12,16 @@ export default function Hero() {
         </p>
 
         <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl">
-          AI Solutions Architect
+          AI &amp; Automation Engineer
           <span className="block text-gray-400">
-            AI Systems Design & Rapid Deployment
+            I build and ship AI-driven systems end to end
           </span>
         </h1>
 
         <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-400">
-          I transform complex technical requirements into production-ready MVPs.
-          Specializing in data-intensive applications, AI/ML integration, and
-          scalable backend architectures.
+          Rapid MVP development — I translate the problem into a technical
+          design and deployed code. LLM orchestration, agentic systems,
+          REST APIs (Node.js / TypeScript), and CI/CD.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">

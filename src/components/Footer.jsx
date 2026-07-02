@@ -8,7 +8,7 @@ export default function Footer() {
           {currentYear} Matt Corwin. Built with React & Tailwind.
         </p>
         <p className="text-sm text-gray-600">
-          AI Solutions Architect
+          AI &amp; Automation Engineer
         </p>
       </div>
     </footer>
