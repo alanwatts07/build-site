@@ -65,8 +65,8 @@ function renderHome() {
     .join('\n')
 
   return wrap(
-    `<h1 style="font-size:28px;color:#fff;margin:0 0 4px">Matt Corwin — AI Solutions Architect</h1>` +
-      `<p style="margin:0 0 8px;color:#9ca3af">Designs and deploys AI systems — memory architectures, trading engines, federal data pipelines. Production systems shipped solo in under two months, every commit verifiable.</p>` +
+    `<h1 style="font-size:28px;color:#fff;margin:0 0 4px">Matt Corwin — AI &amp; Automation Engineer</h1>` +
+      `<p style="margin:0 0 8px;color:#9ca3af">Solutions / Forward-Deployed Engineer. Builds and ships AI-driven systems end to end — LLM orchestration, agentic systems, ML pipelines, REST APIs (Node.js / TypeScript), CI/CD. 11 production systems shipped solo in under three months, every commit verifiable.</p>` +
       `<p style="margin:0 0 24px;font-size:14px">` +
       `<a href="mailto:me@mattcorwin.dev" style="color:#818cf8">me@mattcorwin.dev</a> · ` +
       `<a href="https://github.com/alanwatts07" style="color:#818cf8">GitHub</a> · ` +
@@ -118,7 +118,7 @@ function renderShips() {
 
   return wrap(
     `<h1 style="font-size:28px;color:#fff;margin:0 0 4px">What One Engineer Ships</h1>` +
-      `<p style="margin:0 0 8px;color:#9ca3af">Solo engineer using Claude Code as primary dev tool. Every project below separates what I architected and decided from what Claude generated under my direction — every commit verifiable.</p>` +
+      `<p style="margin:0 0 8px;color:#9ca3af">Solo engineer using Claude Code as primary dev tool. Every project below separates what I designed and decided from what Claude generated under my direction — every commit verifiable.</p>` +
       `<p style="margin:0 0 24px;font-size:14px">` +
       `<a href="mailto:me@mattcorwin.dev" style="color:#818cf8">me@mattcorwin.dev</a> · ` +
       `<a href="https://github.com/alanwatts07" style="color:#818cf8">GitHub</a> · ` +
